@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Cheat Sheet de Formularios HTML</title>
+    <style>
+      body {
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial,
+          sans-serif;
+        margin: 24px;
+        line-height: 1.45;
+      }
+      h1 {
+        margin-bottom: 0.2em;
+      }
+      p.sub {
+        color: #555;
+        margin-top: 0;
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 10px;
+        vertical-align: top;
+      }
+      th {
+        background: #f6f7f9;
+        text-align: left;
+      }
+      code {
+        background: #f3f4f6;
+        padding: 2px 6px;
+        border-radius: 4px;
+        display: inline-block;
+      }
+      .var {
+        color: #d97706;
+        font-weight: 700;
+      } /* naranja */
+      .nowrap {
+        white-space: nowrap;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Formularios HTML — Guía Rápida</h1>
+    <p class="sub">
+      En la columna “Sintaxis (genérica)”, lo que está en
+      <span class="var">&lt;ANGULARES&gt;</span> es lo que debés sustituir.
+    </p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Elemento / Atributo</th>
+          <th>Para qué sirve</th>
+          <th>Sintaxis (genérica)</th>
+          <th>Ejemplo (real)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="nowrap"><code>&lt;form&gt;</code></td>
+          <td>Contiene el formulario; define destino y método.</td>
+          <td>
+            <code
+              >&lt;form action="<span class="var">&lt;URL&gt;</span>"
+              method="<span class="var">&lt;get|post&gt;</span>"&gt; ...
+              &lt;/form&gt;</code
+            >
+          </td>
+          <td><code>&lt;form action="procesar.jsp" method="post"&gt;</code></td>
+        </tr>
+        <tr>
+          <td><code>type="text"</code></td>
+          <td>Campo de texto de una línea.</td>
+          <td>
+            <code
+              >&lt;input type="text" name="<span class="var"
+                >&lt;nombreCampo&gt;</span
+              >"&gt;</code
+            >
+          </td>
+          <td><code>&lt;input type="text" name="usuario"&gt;</code></td>
+        </tr>
+        <tr>
+          <td><code>type="number"</code></td>
+          <td>Número con límites e incrementos.</td>
+          <td>
+            <code
+              >&lt;input type="number" name="<span class="var"
+                >&lt;nombreCampo&gt;</span
+              >" min="<span class="var">&lt;número&gt;</span>" max="<span
+                class="var"
+                >&lt;número&gt;</span
+              >" step="<span class="var">&lt;número&gt;</span>"&gt;</code
+            >
+          </td>
+          <td>
+            <code
+              >&lt;input type="number" name="edad" min="0" max="120"
+              step="1"&gt;</code
+            >
+          </td>
+        </tr>
+        <tr>
+          <td><code>type="password"</code></td>
+          <td>Contraseña (oculta caracteres).</td>
+          <td>
+            <code
+              >&lt;input type="password" name="<span class="var"
+                >&lt;nombreCampo&gt;</span
+              >"&gt;</code
+            >
+          </td>
+          <td>
+            <code>&lt;input type="password" name="clave" required&gt;</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>type="email"</code></td>
+          <td>Correo con validación de formato.</td>
+          <td>
+            <code
+              >&lt;input type="email" name="<span class="var"
+                >&lt;nombreCampo&gt;</span
+              >"&gt;</code
+            >
+          </td>
+          <td>
+            <code
+              >&lt;input type="email" name="correo"
+              placeholder="correo@dominio.com"&gt;</code
+            >
+          </td>
+        </tr>
+        <tr>
+          <td><code>type="date"</code></td>
+          <td>Selector de fecha.</td>
+          <td>
+            <code
+              >&lt;input type="date" name="<span class="var"
+                >&lt;nombreCampo&gt;</span
+              >"&gt;</code
+            >
+          </td>
+          <td><code>&lt;input type="date" name="fecha_nac"&gt;</code></td>
+        </tr>
+        <tr>
+          <td><code>type="radio"</code></td>
+          <td>Selección única por grupo.</td>
+          <td>
+            <code
+              >&lt;input type="radio" name="<span class="var"
+                >&lt;grupo&gt;</span
+              >" value="<span class="var">&lt;valorX&gt;</span>"&gt;</code
+            >
+          </td>
+          <td>
+            <code
+              >&lt;input type="radio" name="genero" value="M"&gt;
+              Masculino</code
+            >
+          </td>
+        </tr>
+        <tr>
+          <td><code>type="checkbox"</code></td>
+          <td>Selección múltiple.</td>
+          <td>
+            <code
+              >&lt;input type="checkbox" name="<span class="var"
+                >&lt;nombreCampo&gt;</span
+              >" value="<span class="var">&lt;valorX&gt;</span>"&gt;</code
+            >
+          </td>
+          <td>
+            <code
+              >&lt;input type="checkbox" name="interes" value="musica"&gt;
+              Música</code
+            >
+          </td>
+        </tr>
+        <tr>
+          <td><code>&lt;select&gt;</code> / <code>&lt;option&gt;</code></td>
+          <td>Lista desplegable.</td>
+          <td>
+            <code
+              >&lt;select name="<span class="var">&lt;nombreCampo&gt;</span
+              >"&gt;&lt;option value="<span class="var">&lt;valorX&gt;</span
+              >"&gt;<span class="var">&lt;Texto&gt;</span
+              >&lt;/option&gt;&lt;/select&gt;</code
+            >
+          </td>
+          <td>
+            <code
+              >&lt;select name="pais"&gt;&lt;option
+              value="UY"&gt;Uruguay&lt;/option&gt;&lt;/select&gt;</code
+            >
+          </td>
+        </tr>
+        <tr>
+          <td><code>&lt;textarea&gt;</code></td>
+          <td>Texto multilínea.</td>
+          <td>
+            <code
+              >&lt;textarea name="<span class="var">&lt;nombreCampo&gt;</span>"
+              rows="<span class="var">&lt;n&gt;</span>" cols="<span class="var"
+                >&lt;n&gt;</span
+              >"&gt;&lt;/textarea&gt;</code
+            >
+          </td>
+          <td>
+            <code
+              >&lt;textarea name="comentarios" rows="4"
+              cols="40"&gt;&lt;/textarea&gt;</code
+            >
+          </td>
+        </tr>
+        <tr>
+          <td><code>name</code></td>
+          <td>Clave que recibe el servidor.</td>
+          <td>
+            <code>name="<span class="var">&lt;nombreCampo&gt;</span>"</code>
+          </td>
+          <td><code>name="usuario"</code></td>
+        </tr>
+        <tr>
+          <td><code>id</code></td>
+          <td>Identificador único en la página.</td>
+          <td>
+            <code>id="<span class="var">&lt;nombreID&gt;</span>"</code>
+          </td>
+          <td><code>id="usuario"</code></td>
+        </tr>
+        <tr>
+          <td><code>value</code></td>
+          <td>Valor por defecto / enviado.</td>
+          <td>
+            <code
+              >value="<span class="var">&lt;valorPorDefecto&gt;</span>"</code
+            >
+          </td>
+          <td><code>value="rojo"</code></td>
+        </tr>
+        <tr>
+          <td><code>placeholder</code></td>
+          <td>Texto guía en el campo.</td>
+          <td>
+            <code
+              >placeholder="<span class="var">&lt;textoGuia&gt;</span>"</code
+            >
+          </td>
+          <td><code>placeholder="Ingrese su nombre"</code></td>
+        </tr>
+        <tr>
+          <td><code>required</code></td>
+          <td>Hace el campo obligatorio.</td>
+          <td><code>required</code></td>
+          <td><code>&lt;input type="email" required&gt;</code></td>
+        </tr>
+        <tr>
+          <td><code>min</code> / <code>max</code></td>
+          <td>Límites (números/fechas).</td>
+          <td>
+            <code
+              >min="<span class="var">&lt;valorMin&gt;</span>" max="<span
+                class="var"
+                >&lt;valorMax&gt;</span
+              >"</code
+            >
+          </td>
+          <td><code>min="1" max="10"</code></td>
+        </tr>
+        <tr>
+          <td><code>step</code></td>
+          <td>Incremento para números.</td>
+          <td>
+            <code>step="<span class="var">&lt;valor&gt;</span>"</code>
+          </td>
+          <td><code>step="0.5"</code></td>
+        </tr>
+        <tr>
+          <td><code>checked</code></td>
+          <td>Marca por defecto (radio/checkbox).</td>
+          <td><code>checked</code></td>
+          <td><code>&lt;input type="checkbox" checked&gt;</code></td>
+        </tr>
+        <tr>
+          <td><code>selected</code></td>
+          <td>Opción preseleccionada en select.</td>
+          <td><code>selected</code></td>
+          <td>
+            <code
+              >&lt;option value="UY" selected&gt;Uruguay&lt;/option&gt;</code
+            >
+          </td>
+        </tr>
+        <tr>
+          <td><code>multiple</code></td>
+          <td>Permite múltiples selecciones.</td>
+          <td>
+            <code
+              >&lt;select name="<span class="var">&lt;nombreCampo&gt;</span>"
+              multiple&gt;...&lt;/select&gt;</code
+            >
+          </td>
+          <td>
+            <code
+              >&lt;select name="colores"
+              multiple&gt;&lt;option&gt;Rojo&lt;/option&gt;&lt;/select&gt;</code
+            >
+          </td>
+        </tr>
+        <tr>
+          <td><code>type="file"</code></td>
+          <td>Subida de archivos.</td>
+          <td>
+            <code
+              >&lt;input type="file" name="<span class="var"
+                >&lt;nombreCampo&gt;</span
+              >"&gt;</code
+            >
+          </td>
+          <td><code>&lt;input type="file" name="foto"&gt;</code></td>
+        </tr>
+        <tr>
+          <td><code>type="submit"</code></td>
+          <td>Envía el formulario.</td>
+          <td>
+            <code
+              >&lt;input type="submit" value="<span class="var"
+                >&lt;textoBoton&gt;</span
+              >"&gt;</code
+            >
+          </td>
+          <td><code>&lt;input type="submit" value="Enviar"&gt;</code></td>
+        </tr>
+        <tr>
+          <td><code>type="reset"</code></td>
+          <td>Limpia el formulario.</td>
+          <td>
+            <code
+              >&lt;input type="reset" value="<span class="var"
+                >&lt;textoBoton&gt;</span
+              >"&gt;</code
+            >
+          </td>
+          <td><code>&lt;input type="reset" value="Borrar"&gt;</code></td>
+        </tr>
+        <tr>
+          <td><code>&lt;button&gt;</code></td>
+          <td>Botón genérico o de envío.</td>
+          <td>
+            <code
+              >&lt;button type="<span class="var">&lt;button|submit&gt;</span
+              >"&gt;<span class="var">&lt;Texto&gt;</span>&lt;/button&gt;</code
+            >
+          </td>
+          <td>
+            <code
+              >&lt;button type="button"
+              onclick="alert('Hola')"&gt;Click&lt;/button&gt;</code
+            >
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

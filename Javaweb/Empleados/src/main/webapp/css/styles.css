@@ -1,0 +1,336 @@
+/* ================== Layout y formulario ================== */
+.form-container {
+  max-width: 640px;
+  margin: 24px auto;
+  padding: 20px;
+  background: #fff;
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Layout en 2 columnas: label | control */
+form {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 24px 12px;
+  align-items: start;
+}
+
+/* Contenedor de cada fila del formulario */
+form > * {
+  margin: 0;
+}
+
+/* Labels */
+form label {
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  height: 44px;
+  margin: 0;
+  padding: 0;
+}
+
+/* Inputs y select */
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="date"],
+select {
+  height: 44px !important;
+  min-height: 44px;
+  max-height: 44px;
+  font-size: 16px;
+  padding: 10px 12px;
+  border: 1px solid #cfd3d7;
+  border-radius: 8px;
+  box-sizing: border-box;
+  line-height: normal;
+  margin: 0;
+  vertical-align: top;
+}
+
+/* Botones de submit SIN clase .btn: estilo por defecto (azul) */
+input[type="submit"]:not(.btn),
+button[type="submit"]:not(.btn) {
+  height: 44px;
+  font-size: 16px;
+  padding: 0 18px;
+  border: 0;
+  border-radius: 10px;
+  background: #0d6efd;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-bottom: 0;
+  margin-right: 12px;
+  display: inline-flex;
+  align-items: center;
+}
+input[type="submit"]:not(.btn):hover,
+button[type="submit"]:not(.btn):hover {
+  background: #0b5ed7;
+}
+
+/* ================== Tipografías y contenedores ================== */
+h1 {
+  max-width: 960px;
+  margin: 24px auto 12px;
+  font-size: 40px;
+  line-height: 1.2;
+  color: #0d1635;
+}
+
+.page-container {
+  max-width: 960px;
+  margin: 0 auto 32px;
+  padding: 0 8px;
+}
+
+/* ================== Tabla ================== */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border: none;
+}
+.table th,
+.table td {
+  padding: 12px 14px;
+  text-align: left;
+  border-bottom: 1px solid #eef1f4;
+  font-size: 15px;
+  vertical-align: middle;
+}
+.table thead th {
+  background: #f1f5f9;
+  color: #0d1635;
+  font-weight: 700;
+  border-bottom: 1px solid #e2e8f0;
+}
+.table tbody tr:hover { 
+  background: #f8fafc; 
+}
+
+/* Mejorado: contenedor de acciones */
+.table .actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.table .actions a, 
+.table .actions form {
+  margin: 0;
+}
+
+.table .actions form {
+  display: inline-flex;
+}
+
+/* Responsivo: scroll horizontal si no entra */
+.table-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-top: 12px;
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+/* ================== Botones reutilizables ================== */
+/* Base para links y botones con clase .btn */
+a.btn,
+button.btn,
+input.btn[type="submit"] {
+  display: inline-block;
+  margin: 0;
+  padding: 8px 14px;
+  background: #0d6efd;
+  color: #fff;
+  border: 0;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color .2s ease;
+  white-space: nowrap;
+}
+
+/* Para botones fuera de tabla (como en formularios) */
+.form-container .btn,
+.page-container > .btn {
+  margin-top: 20px;
+  padding: 10px 16px;
+  font-size: 15px;
+  border-radius: 10px;
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+}
+
+a.btn:hover,
+button.btn:hover,
+input.btn[type="submit"]:hover {
+  background: #0b5ed7;
+}
+
+/* Variantes - colores mejorados */
+.btn-edit,
+a.btn.btn-edit,
+button.btn.btn-edit,
+input.btn.btn-edit[type="submit"] {
+  background: #4299e1 !important;
+  background-color: #4299e1 !important;
+}
+.btn-edit:hover,
+a.btn.btn-edit:hover,
+button.btn.btn-edit:hover,
+input.btn.btn-edit[type="submit"]:hover {
+  background: #3182ce !important;
+  background-color: #3182ce !important;
+}
+
+.btn-danger,
+a.btn.btn-danger,
+button.btn.btn-danger,
+input.btn.btn-danger[type="submit"] {
+  background: #ed8936 !important;
+  background-color: #ed8936 !important;
+}
+.btn-danger:hover,
+a.btn.btn-danger:hover,
+button.btn.btn-danger:hover,
+input.btn.btn-danger[type="submit"]:hover {
+  background: #dd6b20 !important;
+  background-color: #dd6b20 !important;
+}
+
+a.btn.btn-secondary,
+button.btn.btn-secondary,
+input.btn.btn-secondary[type="submit"] {
+  background: #6b7280;
+}
+a.btn.btn-secondary:hover,
+button.btn.btn-secondary:hover,
+input.btn.btn-secondary[type="submit"]:hover {
+  background: #4b5563;
+}
+
+/* Helpers */
+.section-gap { 
+  margin-top: 12px; 
+}
+
+/* Acciones de formulario */
+.form-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+  align-items: center;
+}
+
+/* Forzar altura igual para botones en form-actions */
+.form-actions button,
+.form-actions .btn,
+.form-actions a {
+  margin: 0 !important;
+  height: 44px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  box-sizing: border-box !important;
+}
+
+/* ================== Estilos específicos del formulario empleados ================== */
+.form-section {
+  margin-bottom: 32px;
+  padding: 20px;
+  background: #f8fafc;
+  border-radius: 8px;
+  border-left: 4px solid #4299e1;
+}
+
+.form-section h3 {
+  margin: 0 0 20px 0;
+  color: #2d3748;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.checkbox-group, .radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.checkbox-item, .radio-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.multi-select {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 8px;
+  padding: 12px;
+  border: 1px solid #cfd3d7;
+  border-radius: 8px;
+  background: white;
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+textarea {
+  width: 100%;
+  min-height: 80px;
+  padding: 12px;
+  border: 1px solid #cfd3d7;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 14px;
+  resize: vertical;
+  box-sizing: border-box;
+}
+
+.form-wide {
+  grid-column: 1 / -1;
+}
+
+/* Badges y elementos visuales de la lista */
+.badge {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.badge-success { background: #dcfce7; color: #166534; }
+.badge-danger { background: #fee2e2; color: #991b1b; }
+.badge-info { background: #dbeafe; color: #1e40af; }
+.badge-warning { background: #fef3c7; color: #92400e; }
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  max-width: 200px;
+}
+
+.skill-tag {
+  background: #f1f5f9;
+  color: #475569;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 11px;
+}
+
+.employee-details {
+  font-size: 13px;
+  color: #64748b;
+}

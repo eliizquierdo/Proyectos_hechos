@@ -1,0 +1,21 @@
+table {
+    width: 50%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border: 1px solid gray;
+}
+
+th,
+td {
+    padding: 10px;
+    border: 1px solid gray;
+    text-align: left;
+}
+
+.acciones {
+    width: 120px;
+    /* o menos si querés */
+    white-space: nowrap;
+    /* evita que se rompan los botones */
+    text-align: center;
+}

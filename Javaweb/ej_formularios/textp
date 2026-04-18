@@ -1,0 +1,35 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------------< uy.edu:ej_formularios >------------------------
+[INFO] Building ej_formularios Maven Webapp 1.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ war ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ ej_formularios ---
+[INFO] skip non existing resourceDirectory C:\VS-workspaceWEB\ej_formularios\src\main\resources
+[INFO] 
+[INFO] --- compiler:3.8.0:compile (default-compile) @ ej_formularios ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to C:\VS-workspaceWEB\ej_formularios\target\classes
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /C:/VS-workspaceWEB/ej_formularios/src/main/java/controlador/FormularioServlet.java:[83,6] reached end of file while parsing
+[INFO] 1 error
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  0.938 s
+[INFO] Finished at: 2025-08-20T14:30:26-03:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.0:compile (default-compile) on project ej_formularios: Compilation failure
+[ERROR] /C:/VS-workspaceWEB/ej_formularios/src/main/java/controlador/FormularioServlet.java:[83,6] reached end of file while parsing
+[ERROR] 
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

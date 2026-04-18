@@ -1,0 +1,98 @@
+/* ===== Calculadora de Edad — estilos básicos ===== */
+:root{
+  --fg:#0f172a;           /* texto */
+  --bg:#ffffff;           /* fondo */
+  --muted:#64748b;        /* texto secundario */
+  --ok:#065f46;           /* verde */
+  --err:#991b1b;          /* rojo */
+  --brand:#2563eb;        /* botón */
+  --brand-ink:#ffffff;
+  --card:#f8fafc;
+  --radius:16px;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color:var(--fg);
+  background:var(--bg);
+  line-height:1.5;
+  margin:0;
+  padding:0;
+}
+
+.page{
+  max-width: 720px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+h1{
+  font-size: clamp(1.4rem, 1.2rem + 1vw, 2rem);
+  margin: 0 0 1rem 0;
+}
+
+form{
+  display:flex;
+  gap:.75rem;
+  flex-wrap:wrap;
+  align-items:center;
+  background:var(--card);
+  padding:1rem;
+  border-radius: var(--radius);
+  box-shadow: 0 6px 20px rgba(2,6,23,.06);
+}
+
+label{
+  color:var(--muted);
+  font-weight:600;
+  margin-right:.25rem;
+}
+
+input[type="number"]{
+  width:12rem;
+  max-width:100%;
+  padding:.55rem .7rem;
+  border:1px solid #e2e8f0;
+  border-radius:.6rem;
+  background:#fff;
+  font-size:1rem;
+  transition:border-color .2s, box-shadow .2s;
+}
+
+input[type="number"]:focus{
+  outline:none;
+  border-color:#93c5fd;
+  box-shadow:0 0 0 3px rgba(37,99,235,.15);
+}
+
+input[type="submit"],
+button[type="submit"]{
+  padding:.6rem .95rem;
+  border:none;
+  border-radius:.7rem;
+  background:var(--brand);
+  color:var(--brand-ink);
+  font-weight:600;
+  cursor:pointer;
+  transition: transform .04s ease, filter .2s ease;
+}
+
+input[type="submit"]:hover{ filter:brightness(1.05)}
+input[type="submit"]:active{ transform:translateY(1px) }
+
+p{ margin:.75rem 0; }
+
+.ok{ color:var(--ok); font-weight:600; }
+.err{ color:var(--err); font-weight:600; }
+
+/* Utilidades opcionales */
+.hidden{ display:none !important; }
+.center{ text-align:center; }
+
+/* Responsivo */
+@media (max-width:480px){
+  form{ padding:.85rem }
+  label{ width:100%; margin-bottom:.25rem }
+}

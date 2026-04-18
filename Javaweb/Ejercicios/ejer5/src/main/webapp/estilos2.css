@@ -1,0 +1,146 @@
+/* ======= Paleta y base ======= */
+:root{
+  --bg:#0f1020;
+  --bg2:#14152a;
+  --fg:#e5f2ff;
+  --accent:#26ffe6;
+  --accent-2:#ff3b3b;
+  --card:#1b1d39;
+  --grid:#2a2d57;
+}
+
+*{ box-sizing:border-box }
+html,body{
+  height:100%;
+  background:
+    linear-gradient(0deg, rgba(0,0,0,.25), rgba(0,0,0,.25)),
+    repeating-linear-gradient(90deg, var(--bg) 0 16px, var(--bg2) 16px 32px);
+  color:var(--fg);
+  margin:0;
+  image-rendering: pixelated;
+}
+
+body{ font-family:"VT323", monospace; font-size:22px; letter-spacing:.2px }
+h1,h2,legend{ font-family:"Press Start 2P", system-ui, sans-serif }
+h1{
+  text-align:center; font-size:22px; color:var(--accent);
+  text-shadow:0 0 6px rgba(38,255,230,.6); margin:28px 0 10px
+}
+
+/* ===== Contenedor tipo cartucho ===== */
+.form-container{
+  max-width:760px; margin:20px auto; padding:24px 22px;
+  background:var(--card); border:4px solid var(--grid); border-radius:12px;
+  box-shadow: 0 0 0 4px #000 inset, 0 0 0 8px var(--grid) inset,
+              0 12px 0 0 #000, 0 12px 0 4px rgba(0,0,0,.35);
+  position:relative;
+}
+.form-container::before,.form-container::after{
+  content:""; position:absolute; width:16px; height:16px; background:var(--accent);
+  box-shadow:0 0 0 4px #000 inset;
+}
+.form-container::before{ left:-8px; top:-8px }
+.form-container::after { right:-8px; bottom:-8px }
+
+/* ===== Fieldset ===== */
+.fieldset{ border:0; margin:0; padding:0 }
+.fieldset > legend{
+  font-size:14px; color:#fff; margin:0 0 16px;
+  padding:8px 10px; background:#000; border:3px solid var(--accent);
+  display:inline-block; border-radius:6px;
+}
+
+/* ===== Layout 2 columnas ===== */
+form{
+  display:grid;
+  grid-template-columns: 220px 1fr;
+  gap:14px 14px;
+}
+form label{
+  font-weight:700; display:flex; align-items:center; color:#cfe7ff;
+}
+
+/* ===== Inputs ===== */
+input[type="text"]{
+  height:48px; padding:0 12px; font:inherit; color:#eaffff;
+  background:#0b0d23; border:3px solid #000; border-radius:6px;
+  box-shadow: inset 0 0 0 3px var(--grid), 0 4px 0 #000;
+}
+input[type="text"]::placeholder{ color:#8aa4b8 }
+input[type="text"]:focus{ outline:4px solid var(--accent); outline-offset:2px }
+
+/* ===== Radios 8‑bit ===== */
+.radio-group{
+  display:grid; grid-template-columns: repeat(2, minmax(160px, 1fr));
+  gap:10px 18px; align-items:center;
+}
+.radio8{ display:flex; align-items:center; gap:10px; font-weight:700; color:#cfe7ff }
+.radio8 input{
+  appearance:none; -webkit-appearance:none;
+  width:20px; height:20px; cursor:pointer;
+  background:#0b0d23; border:3px solid #000; border-radius:3px;
+  box-shadow: inset 0 0 0 3px var(--grid), 0 3px 0 #000;
+  position:relative;
+}
+.radio8 input:hover{ filter:brightness(1.1) }
+.radio8 input:focus{ outline:4px solid var(--accent); outline-offset:2px }
+.radio8 input:checked{
+  background:var(--accent);
+  box-shadow: inset 0 0 0 3px #001014, 0 3px 0 #000;
+}
+.radio8 input:checked::after{
+  content:""; position:absolute; inset:4px;
+  background:#001014; box-shadow:0 0 0 2px #001014;
+}
+.radio8 span{ user-select:none }
+
+/* ===== Checkboxes 8‑bit ===== */
+.checkbox-group{
+  display:grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap:10px 18px; margin-bottom:4px;
+}
+.chk8{ display:flex; align-items:center; gap:10px; font-weight:700; color:#cfe7ff }
+.chk8 input{
+  appearance:none; -webkit-appearance:none;
+  width:20px; height:20px; cursor:pointer;
+  background:#0b0d23; border:3px solid #000; border-radius:3px;
+  box-shadow: inset 0 0 0 3px var(--grid), 0 3px 0 #000; position:relative;
+}
+.chk8 input:hover{ filter:brightness(1.1) }
+.chk8 input:focus{ outline:4px solid var(--accent); outline-offset:2px }
+.chk8 input:checked{
+  background:var(--accent);
+  box-shadow: inset 0 0 0 3px #001014, 0 3px 0 #000;
+}
+.chk8 input:checked::after{
+  content:""; position:absolute; top:2px; left:6px; width:4px; height:10px;
+  border: solid #001014; border-width:0 3px 3px 0; transform:rotate(45deg);
+}
+.chk8 span{ user-select:none }
+
+/* ===== Botón ===== */
+input[type="submit"]{
+  grid-column:2; justify-self:start;
+  height:52px; padding:0 22px;
+  font-family:"Press Start 2P", system-ui, sans-serif;
+  font-size:12px; letter-spacing:1px;
+  color:#001014; background:var(--accent);
+  border:4px solid #000; border-radius:6px;
+  box-shadow:0 6px 0 #000, inset 0 -6px 0 rgba(0,0,0,.15);
+  cursor:pointer; text-transform:uppercase;
+}
+input[type="submit"]:hover{ filter:saturate(1.2) brightness(1.05) }
+input[type="submit"]:active{ transform:translateY(4px); box-shadow:0 2px 0 #000, inset 0 -2px 0 rgba(0,0,0,.25) }
+
+/* ===== Resultados ===== */
+.result-card h2{
+  margin:0 0 10px; color:var(--accent-2);
+  text-shadow:0 0 6px rgba(255,59,59,.5);
+}
+.result-card p{ margin:6px 0 }
+
+/* ===== Responsive ===== */
+@media (max-width:640px){
+  form{ grid-template-columns:1fr }
+  input[type="submit"]{ grid-column:1 }
+}

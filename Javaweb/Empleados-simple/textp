@@ -1,0 +1,117 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------------< com.utu:empleados-simple >----------------------
+[INFO] Building empleados-simple Maven Webapp 1.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ war ]---------------------------------
+[WARNING] The artifact mysql:mysql-connector-java:jar:8.0.33 has been relocated to com.mysql:mysql-connector-j:jar:8.0.33: MySQL Connector/J artifacts moved to reverse-DNS compliant Maven 2+ coordinates.
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ empleados-simple ---
+[INFO] skip non existing resourceDirectory C:\VS-workspaceWEB\Empleados-simple\src\main\resources
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ empleados-simple ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 3 source files with javac [debug target 8] to target\classes
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /C:/VS-workspaceWEB/Empleados-simple/src/main/java/modelo/dao/EmpleadoDAO.java:[25,13] cannot find symbol
+  symbol:   method setCargo(java.lang.String)
+  location: variable emp1 of type modelo.vo.EmpleadoVO
+[ERROR] /C:/VS-workspaceWEB/Empleados-simple/src/main/java/modelo/dao/EmpleadoDAO.java:[28,13] cannot find symbol
+  symbol:   method setHabilidades(java.lang.String[])
+  location: variable emp1 of type modelo.vo.EmpleadoVO
+[ERROR] /C:/VS-workspaceWEB/Empleados-simple/src/main/java/modelo/dao/EmpleadoDAO.java:[30,13] cannot find symbol
+  symbol:   method setTieneVehiculo(boolean)
+  location: variable emp1 of type modelo.vo.EmpleadoVO
+[ERROR] /C:/VS-workspaceWEB/Empleados-simple/src/main/java/modelo/dao/EmpleadoDAO.java:[31,13] cannot find symbol
+  symbol:   method setDisponibleViajes(boolean)
+  location: variable emp1 of type modelo.vo.EmpleadoVO
+[ERROR] /C:/VS-workspaceWEB/Empleados-simple/src/main/java/modelo/dao/EmpleadoDAO.java:[32,13] cannot find symbol
+  symbol:   method setNivelEducacion(java.lang.String)
+  location: variable emp1 of type modelo.vo.EmpleadoVO
+[ERROR] /C:/VS-workspaceWEB/Empleados-simple/src/main/java/modelo/dao/EmpleadoDAO.java:[33,13] cannot find symbol
+  symbol:   method setTurno(java.lang.String)
+  location: variable emp1 of type modelo.vo.EmpleadoVO
+[ERROR] /C:/VS-workspaceWEB/Empleados-simple/src/main/java/modelo/dao/EmpleadoDAO.java:[34,13] cannot find symbol
+  symbol:   method setFechaNacimiento(java.lang.String)
+  location: variable emp1 of type modelo.vo.EmpleadoVO
+[ERROR] /C:/VS-workspaceWEB/Empleados-simple/src/main/java/modelo/dao/EmpleadoDAO.java:[44,13] cannot find symbol
+  symbol:   method setCargo(java.lang.String)
+  location: variable emp2 of type modelo.vo.EmpleadoVO
+[ERROR] /C:/VS-workspaceWEB/Empleados-simple/src/main/java/modelo/dao/EmpleadoDAO.java:[47,13] cannot find symbol
+  symbol:   method setHabilidades(java.lang.String[])
+  location: variable emp2 of type modelo.vo.EmpleadoVO
+[ERROR] /C:/VS-workspaceWEB/Empleados-simple/src/main/java/modelo/dao/EmpleadoDAO.java:[49,13] cannot find symbol
+  symbol:   method setTieneVehiculo(boolean)
+  location: variable emp2 of type modelo.vo.EmpleadoVO
+[ERROR] /C:/VS-workspaceWEB/Empleados-simple/src/main/java/modelo/dao/EmpleadoDAO.java:[50,13] cannot find symbol
+  symbol:   method setDisponibleViajes(boolean)
+  location: variable emp2 of type modelo.vo.EmpleadoVO
+[ERROR] /C:/VS-workspaceWEB/Empleados-simple/src/main/java/modelo/dao/EmpleadoDAO.java:[51,13] cannot find symbol
+  symbol:   method setNivelEducacion(java.lang.String)
+  location: variable emp2 of type modelo.vo.EmpleadoVO
+[ERROR] /C:/VS-workspaceWEB/Empleados-simple/src/main/java/modelo/dao/EmpleadoDAO.java:[52,13] cannot find symbol
+  symbol:   method setTurno(java.lang.String)
+  location: variable emp2 of type modelo.vo.EmpleadoVO
+[ERROR] /C:/VS-workspaceWEB/Empleados-simple/src/main/java/modelo/dao/EmpleadoDAO.java:[53,13] cannot find symbol
+  symbol:   method setFechaNacimiento(java.lang.String)
+  location: variable emp2 of type modelo.vo.EmpleadoVO
+[INFO] 14 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.027 s
+[INFO] Finished at: 2025-09-09T20:06:32-03:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.13.0:compile (default-compile) on project empleados-simple: Compilation failure: Compilation failure: 
+[ERROR] /C:/VS-workspaceWEB/Empleados-simple/src/main/java/modelo/dao/EmpleadoDAO.java:[25,13] cannot find symbol
+[ERROR]   symbol:   method setCargo(java.lang.String)
+[ERROR]   location: variable emp1 of type modelo.vo.EmpleadoVO
+[ERROR] /C:/VS-workspaceWEB/Empleados-simple/src/main/java/modelo/dao/EmpleadoDAO.java:[28,13] cannot find symbol
+[ERROR]   symbol:   method setHabilidades(java.lang.String[])
+[ERROR]   location: variable emp1 of type modelo.vo.EmpleadoVO
+[ERROR] /C:/VS-workspaceWEB/Empleados-simple/src/main/java/modelo/dao/EmpleadoDAO.java:[30,13] cannot find symbol
+[ERROR]   symbol:   method setTieneVehiculo(boolean)
+[ERROR]   location: variable emp1 of type modelo.vo.EmpleadoVO
+[ERROR] /C:/VS-workspaceWEB/Empleados-simple/src/main/java/modelo/dao/EmpleadoDAO.java:[31,13] cannot find symbol
+[ERROR]   symbol:   method setDisponibleViajes(boolean)
+[ERROR]   location: variable emp1 of type modelo.vo.EmpleadoVO
+[ERROR] /C:/VS-workspaceWEB/Empleados-simple/src/main/java/modelo/dao/EmpleadoDAO.java:[32,13] cannot find symbol
+[ERROR]   symbol:   method setNivelEducacion(java.lang.String)
+[ERROR]   location: variable emp1 of type modelo.vo.EmpleadoVO
+[ERROR] /C:/VS-workspaceWEB/Empleados-simple/src/main/java/modelo/dao/EmpleadoDAO.java:[33,13] cannot find symbol
+[ERROR]   symbol:   method setTurno(java.lang.String)
+[ERROR]   location: variable emp1 of type modelo.vo.EmpleadoVO
+[ERROR] /C:/VS-workspaceWEB/Empleados-simple/src/main/java/modelo/dao/EmpleadoDAO.java:[34,13] cannot find symbol
+[ERROR]   symbol:   method setFechaNacimiento(java.lang.String)
+[ERROR]   location: variable emp1 of type modelo.vo.EmpleadoVO
+[ERROR] /C:/VS-workspaceWEB/Empleados-simple/src/main/java/modelo/dao/EmpleadoDAO.java:[44,13] cannot find symbol
+[ERROR]   symbol:   method setCargo(java.lang.String)
+[ERROR]   location: variable emp2 of type modelo.vo.EmpleadoVO
+[ERROR] /C:/VS-workspaceWEB/Empleados-simple/src/main/java/modelo/dao/EmpleadoDAO.java:[47,13] cannot find symbol
+[ERROR]   symbol:   method setHabilidades(java.lang.String[])
+[ERROR]   location: variable emp2 of type modelo.vo.EmpleadoVO
+[ERROR] /C:/VS-workspaceWEB/Empleados-simple/src/main/java/modelo/dao/EmpleadoDAO.java:[49,13] cannot find symbol
+[ERROR]   symbol:   method setTieneVehiculo(boolean)
+[ERROR]   location: variable emp2 of type modelo.vo.EmpleadoVO
+[ERROR] /C:/VS-workspaceWEB/Empleados-simple/src/main/java/modelo/dao/EmpleadoDAO.java:[50,13] cannot find symbol
+[ERROR]   symbol:   method setDisponibleViajes(boolean)
+[ERROR]   location: variable emp2 of type modelo.vo.EmpleadoVO
+[ERROR] /C:/VS-workspaceWEB/Empleados-simple/src/main/java/modelo/dao/EmpleadoDAO.java:[51,13] cannot find symbol
+[ERROR]   symbol:   method setNivelEducacion(java.lang.String)
+[ERROR]   location: variable emp2 of type modelo.vo.EmpleadoVO
+[ERROR] /C:/VS-workspaceWEB/Empleados-simple/src/main/java/modelo/dao/EmpleadoDAO.java:[52,13] cannot find symbol
+[ERROR]   symbol:   method setTurno(java.lang.String)
+[ERROR]   location: variable emp2 of type modelo.vo.EmpleadoVO
+[ERROR] /C:/VS-workspaceWEB/Empleados-simple/src/main/java/modelo/dao/EmpleadoDAO.java:[53,13] cannot find symbol
+[ERROR]   symbol:   method setFechaNacimiento(java.lang.String)
+[ERROR]   location: variable emp2 of type modelo.vo.EmpleadoVO
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

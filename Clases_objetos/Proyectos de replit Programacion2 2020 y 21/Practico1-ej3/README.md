@@ -1,0 +1,5 @@
+**Ejercicio 3 (CAI – Supervisión del rendimiento de los estudiantes):** Los sistemas de instrucción asistida por computadora más sofisticados supervisan el rendimiento del estudiante durante cierto tiempo. La decisión de empezar un nuevo tema se basa a menudo en el éxito del estudiante con los temas anteriores.
+
+Modifique el programa del ejercicio 2, para contar el número de respuestas correctas e incorrectas introducidas por el estudiante. Una vez que el estudiante escriba 10 respuestas, su programa debe calcular el porcentaje de respuestas correctas. Si éste es menor del 75%, imprima “Por favor pide ayuda adicional a tu instructor” y reinicie el programa, para que otro estudiante pueda probarlo. Si el porcentaje es del 75% o mayor, muestre el mensaje “¡Felicidades, estás listo para pasar al siguiente nivel!” y luego reinicie el programa, para que otro estudiante pueda probarlo.
+
+**Atención**: Recuerden que tienen que escribir el código en la **clase Programa**

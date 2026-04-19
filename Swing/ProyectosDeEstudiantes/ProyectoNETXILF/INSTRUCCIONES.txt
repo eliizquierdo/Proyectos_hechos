@@ -1,0 +1,5 @@
+La carpeta img contiene todas las imagenes del programa. Para que se carguen de manera correcta la misma debe encontrarse de la siguiente forma
+C:\img
+
+Para acceder al menu oculto, se debera iniciar el programa. Cuando aparezca la primera pantalla con las tres opciones (Ingresar, Crear cuenta, Ver programacion) no se debera tocar nada, solo ingresar "informatica" y presionar ENTER. El script que se encuentra en la BD viene preparado para que al ejecutarse ingrese 3 cuentas de administrador (entre otros clientes, cuentas, perfiles, programacion, etc)
+pueden utilizar mauricio.gonzalez@netxilf.com y 1234 de password.

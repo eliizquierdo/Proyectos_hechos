@@ -1,0 +1,5 @@
+1. Instalar XAMPP
+2. Abrir XAMPP, habilitar Apache y MySQL
+3. En el navegador web escribir http://localhost/phpmyadmin/
+4. Ir a la sección importar, elegir script.sql incluido en la carpeta bd del proyecto
+5. Ejecutar la aplicación.

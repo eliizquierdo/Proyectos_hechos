@@ -1,0 +1,420 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>Módulo 1</title>
+</head>
+
+<body>
+
+<table border="3" cellspacing="5" width="100%" id="AutoNumber1" cellpadding="5" height="280">
+  <tr>
+    <td width="74%" bgcolor="#000000" height="86">
+      <p align="left"><font face="Verdana" color="#FFFFFF"><b>Módulo 5: Clases
+      y Objetos <img border="0" src="puronombreJava1.JPG" align="right" width="346" height="68"></b></font>
+      <p align="center">&nbsp;&nbsp;&nbsp; <font face="Verdana" color="#FFFFFF"><b>1.
+      Modelación de Clases y Objetos</b></font></td>
+  </tr>
+  <tr>
+    <td width="74%" height="12"><span lang="ES-MX">
+      <p><font size="2" face="Verdana">Cada vez que se analiza un problema a resolver
+      utilizando la computadora y en este caso desarrollando una solución con
+      una herramienta Orientada a Objetos, el análisis se debe hacer sobre los
+      objetos involucrados en la solución y la interacción que entre ellos
+      existe.</font></p>
+      <p><font face="Verdana" size="2">El diseño orientado a objetos nos ayuda a construir un modelo de
+      objetos para un sistema que será desarrollado. Un modelo de objetos
+      especifica las clases, sus atributos y métodos y sus relaciones con otras
+      clases.&nbsp;</font></p>
+      <p><font size="2" face="Verdana">Por ejemplo al hablar de clientes, artículos,
+      proveedores, inmediatamente debemos analizar cada uno por separado y&nbsp;
+      la interacción que entre ellos existe y sobre todo la que tiene relación
+      al problema en cuestión. Analizando primero las piezas aisladas y luego
+      entrelazando sus relaciones.</font></p>
+      <p><font size="2" face="Verdana">Por ejemplo debemos tomar en cuenta primero las
+      características que competen a los artículos y sobre estas las que
+      competen al problema en cuestión o posibles problemas futuros que
+      pudieran ser relacionados a los datos ahora analizados. Vienen a la mente
+      sobre el artículo: el número, el nombre, el precio, la cantidad en
+      inventario, el proveedor, etc. Asi mísmo nos debemos preocupar por las
+      conductas que reportan estos artículos, sobre todo las que afectan a
+      nuestro problema en cuestión, por ejemplo un artículo se da de alta en
+      nuestro inventario, tambien se vende, puede ser que se regrese por el
+      cliente, puede ser que se regrese por la empresa si es que esta en malas
+      condiciones, etc.</font></p>
+      <p><font size="2" face="Verdana">De esta manera empezamos a definir las variables de
+      instancia que contendrá cada uno de los objetos de todas las clases
+      posibles que estamos analizando, y así de esa manera también empezamos a
+      definir los métodos que hacen uso de esas variables de instancia y que
+      reflejan la problemática analizada.</font></p>
+      <p><font size="2" face="Verdana">Una vez que tenemos las clases definida con sus
+      características o atributos&nbsp; (variables) y sus conductas (métodos),
+      entonces es que empezamos a desarrollar la aplicación que hará uso de
+      estas clases. Esto puede ser a través de una aplicación no gráfica, una
+      aplicación gráfica o un applet.</font></p>
+      <p><font face="Verdana" size="2">A continuación se presentan una serie de pasos necesarios para crear
+      un modelo de objetos a partir de la especificación de un problema a
+      resolver:</font></p>
+      <ol>
+        <li>
+          <p style="margin-bottom: 16"><font face="Verdana" size="2"><b>Identificar clases de objetos a partir
+          de la especificación del problema</b> (ver sustantivos y verbos). Una
+          manera sencilla de hacer esto es empezar por identificar las clases al
+          analizar la descripción textual en la especificación del problema.
+          En este análisis textual, los sustantivos y las frases de sustantivos
+          nos ayudan a entener con frecuencia los objetos y sus clases. Los
+          sustantivos en singular (&quot;cuenta&quot;, &quot;carro&quot; y
+          &quot;alumno&quot;) y los sustantivos en plural (&quot;puntos&quot;,
+          &quot;carros&quot; y &quot;cuentas&quot;) indican clases. Los
+          sustantivos propios (&quot;la cuenta de Juan&quot;) y los sustantivos
+          de referencia directa (&quot;el individuo que tenia la cuenta&quot;)
+          indican objetos. </font>
+        <li>
+          <p style="margin-bottom: 16"><font face="Verdana" size="2"><b>Identificar relaciones entre clases</b>.
+          Aquí se sugiere que se cree una tabla <em>n x n</em> donde <em>n</em>
+          es el número de clases. Se deben nombrar las filas y las columnas con
+          los nombres de las clases y después se debe escribir en cada celda de
+          intersección, una relación de asociación, donde se define una
+          especialización, si es que la clase del renglón es aun más
+          especializada que la clase de la columna, o se escribe una
+          generalización si la clase de la columna es una especialización aun
+          más específica que la clase del renglón (vease ejemplo), si hay
+          alguna relación entre las clases se escribe esta relación.&nbsp;
+          </font>
+        <li>
+          <p style="margin-bottom: 16"><font face="Verdana" size="2"><b>Identificar los atributos de cada
+          clase</b>. Enumerar aqui aquellos datos propios de cada una de las
+          clases mencionadas. </font>
+        <li>
+          <p style="margin-bottom: 16"><font face="Verdana" size="2"><b>Identificar los métodos de cada clase</b>.
+          Aqui se deben de identificar las acciones que deben ser realizadas por
+          los objetos de la clase ya sea acciones que no tengan relación con
+          otras clases o acciones en donde involucren otras clases, y asi
+          modificar métodos en ambas clases. </font>
+        <li>
+          <p style="margin-bottom: 16"><font face="Verdana" size="2"><b>Modelar el problema utilizando UML(<dfn>Unified
+          Modeling Language</dfn>)</b>. La modelación del problema se hace
+          después de haber hecho estas asociaciones entre clases. El propósito
+          de este curso no es que definas la modelación de las clases que
+          representan a un problema planteado, pero es importante que destaques
+          las relaciones entre clases para que estes preparado posteriormente en
+          algún curso adicional sobre modelación de objetos.</font></li>
+      </ol>
+      <p><font face="Verdana" size="2">A continuación presentamos una manera en la que se pudieran establecer
+      una relación específica&nbsp; de un enunciado de &quot;<em>un cliente es
+      una persona que tiene una o más cuentas</em>&quot;.</font></p>
+      <blockquote>
+        <table borderColor="#000000" cellSpacing="0" borderColorDark="#000000" cellPadding="2" width="75%" borderColorLight="#000000" border="1">
+          <tbody>
+            <tr>
+              <td width="25%">&nbsp;</td>
+              <td width="25%">
+                <div align="center">
+                  <code><strong>Persona</strong></code>
+                </div>
+              </td>
+              <td width="25%">
+                <div align="center">
+                  <code><strong>Cliente</strong></code>
+                </div>
+              </td>
+              <td width="25%">
+                <div align="center">
+                  <code><strong>Cuenta</strong></code>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div align="center">
+                  <code><strong>Persona</strong></code>
+                </div>
+              </td>
+              <td>
+                <div align="center">
+                  <em>no</em>
+                </div>
+              </td>
+              <td>
+                <div align="center">
+                  <em>generalización</em>
+                </div>
+              </td>
+              <td>
+                <div align="center">
+                  <em>no</em>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div align="center">
+                  <code><strong>Cliente</strong></code>
+                </div>
+              </td>
+              <td>
+                <div align="center">
+                  <em>especialización</em>
+                </div>
+              </td>
+              <td>
+                <div align="center">
+                  <em>no</em>
+                </div>
+              </td>
+              <td>
+                <div align="center">
+                  <em>posee alguna cuenta</em>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div align="center">
+                  <code><strong>Cuenta</strong></code>
+                </div>
+              </td>
+              <td>
+                <div align="center">
+                  <em>no</em>
+                </div>
+              </td>
+              <td>
+                <div align="center">
+                  <em>X</em>
+                </div>
+              </td>
+              <td>
+                <div align="center">
+                  <em>no</em>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </blockquote>
+      <p align="justify">&nbsp;<font face="Verdana" size="2">Cuando trabajamos con un problema específico, en relación a
+      este curso, se debe trabajar con los puntos 1, 3 y 4, para poder entonces
+      crear las clases en Java, como hemos visto anteriormente. Después
+      escribimos la aplicación que utilice estas clases.&nbsp;</font></p>
+      <h3 align="justify"><font face="Verdana" size="2">Definición de una Clase</font></h3>
+      <p align="justify"><font face="Verdana" size="2">La definición de una clase se entiende mejor al utilizar el diagrama
+      de clase, que es la notación que se usa en UML. Así como se muestra
+      abajo, una clase está representada por un rectángulo con tres secciones.
+      La primera sección es donde se define el nombre de la clase; la segunda
+      sección describe los atributos de la clase y la tercera sección es
+      para&nbsp; los métodos de la clase.</font></p>
+      <p align="center"><img border="0" src="M5-2Ja2.gif" width="276" height="280"></p>
+      <p align="justify"><font face="Verdana" size="2">Esto nos ayuda a entender visualmente la manera en la que una clase
+      esta compuesta.&nbsp;&nbsp;</font></p>
+      <p align="justify"><font face="Verdana" size="2">El tipo de una variable y el tipo de retorno de un método están
+      especificados por dos puntos ( : ) seguidos por el nombre de un tipo. La
+      especificación de un atributo o método comienza con un símbolo que
+      indica la vista de dicho atributo o método:</font></p>
+      <ul>
+        <li>
+        <p align="justify"><font face="Verdana" size="2">- indica vista privada
+        </font>
+        <li>
+        <p align="justify"><font face="Verdana" size="2">+ indica vista pública</font></li>
+      </ul>
+      <p align="justify"><font face="Verdana" size="2">La <em>vista privada </em>no permite que otras clases tengan acceso a
+      este atributo o método, mientras que la <em>vista pública </em>permite
+      que otras clases tengan acceso a este atributo o método.</font></p>
+      <p align="justify"><font face="Verdana" size="2">Normalmente, como lo hemos mencionado, los atributos se deben definir
+      como privados, de esta manera se maneja el concepto llamado como
+      encapsulamiento, en el que el objeto mantiene el control de la
+      información que maneja. Los métodos se definen comunmente como
+      públicos, para que cualquiera pueda hacer uso de ellos, a menos que sean
+      métodos privados definidos para algún cálculo que será propio de la
+      clase donde se definen.</font></p>
+      <p align="justify"><font face="Verdana" size="2">Los atributos privados son entonces utilizados (accedidos o
+      modificados) a través de métodos públicos, el método que sirve para
+      tomar algun valor de un atributo privado es llamado de acceso (accesor) y
+      el que sirve para modificar un valor del atributo privado es llamado
+      modificador (mutator).</font></p>
+      <p align="justify"><font face="Verdana" size="2">A continuación mostramos la representación de UML para la clase
+      Alumno, en la que tenemos tres atributos privados: matricula, nombre y
+      saldo. Y los métodos públicos: método de acceso para matricula, nombre
+      y saldo, métodos modificadores para matrícula, nombre y saldo. Definimos
+      también un método privado para hacer el cálculo del saldo, y es privado
+      porque no requerimos usarlo fuera de la clase. </font>
+      <p>&nbsp;</p>
+      <p align="center"><img border="0" src="M5-2Ja3.gif" width="276" height="280"></p>
+      <p align="justify"><font face="Verdana" size="2"><b>Clases de Envoltura 
+      (Wrapper Classes)</b></font><p align="justify">
+    <font face="Verdana" size="2">Existen
+      una serie de clases llamadas clases de envoltura o wrapper classes, que
+      son las clases que utiliza Java para manejar los datos primitivos, pero a
+      través de objetos, es decir, en la mayoria de las clases de Java se
+      tienen métodos que utilizan objetos, son pocos los métodos o métodos
+      constructores que toman como parámetros los datos primitivos (int, float,
+      double, char, etc). Es por esto que en Java se han definido estas clases
+      de envoltura.</font><p align="justify"><font face="Verdana" size="2">Existe una clase de envoltura para cada
+      diferente tipo de dato primitivo, dentro de ellas se tienen una serie de
+      constructores utilizados para crear objetos de la clase a partir de
+      diferentes valores primitivos.</font><p align="justify">
+    <font face="Verdana" size="2">Hasta ahora hemos utilizado
+      mucho el método parseInt y el método parseDouble de las clases Integer y
+      Double correspondientemente, es importante que analices los constructores
+      que se tienen en cada una de estas clases, así como de las demas clases
+      de envoltura para que puedas utilzarlas eficientemente de acuerdo a tus
+      necesidades.</font><p align="justify"><font face="Verdana" size="2">Es importante que las consultes estas clases
+      son:</font><p align="justify"><font face="Verdana" size="2">&nbsp; </font>
+      <table border="1" width="100%">
+        <tr>
+          <td width="50%" align="center"><b>Tipo de Dato Primitivo</b>
+            <p>&nbsp;</td>
+          <td width="50%" align="center"><b>Clase de Envoltura (Wrapper Class)
+            Correspondiente</b>
+            <p>&nbsp;</td>
+        </tr>
+        <tr>
+          <td width="50%" align="left">
+            <blockquote>
+              <p>byte</p>
+            </blockquote>
+          </td>
+          <td width="50%" align="left">
+            <blockquote>
+              <a href="http://java.sun.com/products/j2se/1.4.1/docs/api/java/lang/Byte.html" target="externalWindow"><code>java.lang.Byte</code></a>
+            </blockquote>
+          </td>
+        </tr>
+        <tr>
+          <td width="50%" align="left">
+            <blockquote>
+              <p><code>short</code></p>
+            </blockquote>
+          </td>
+          <td width="50%" align="left">
+            <blockquote>
+              <p><span lang="ES-MX"><a href="http://java.sun.com/products/j2se/1.4.1/docs/api/java/lang/Short.html" target="externalWindow"><code>java.lang.Short</code></a></span></p>
+            </blockquote>
+          </td>
+        </tr>
+        <tr>
+          <td width="50%" align="left">
+            <blockquote>
+              <p>integer</p>
+            </blockquote>
+          </td>
+          <td width="50%" align="left">
+            <blockquote>
+              <p><span lang="ES-MX"><a href="http://java.sun.com/products/j2se/1.4.1/docs/api/java/lang/Integer.html" target="externalWindow"><code>java.lang.Integer</code></a></span></p>
+            </blockquote>
+          </td>
+        </tr>
+        <tr>
+          <td width="50%" align="left">
+            <blockquote>
+              <p>long</p>
+            </blockquote>
+          </td>
+          <td width="50%" align="left">
+            <blockquote>
+              <p><span lang="ES-MX"><a href="http://java.sun.com/products/j2se/1.4.1/docs/api/java/lang/Long.html" target="externalWindow"><code>java.lang.Long</code></a></span></p>
+            </blockquote>
+          </td>
+        </tr>
+        <tr>
+          <td width="50%" align="left">
+            <blockquote>
+              <p>char</p>
+            </blockquote>
+          </td>
+          <td width="50%" align="left">
+            <blockquote>
+              <p><span lang="ES-MX"><a href="http://java.sun.com/products/j2se/1.4.1/docs/api/java/lang/Character.html" target="externalWindow"><code>java.lang.Character</code></a></span></p>
+            </blockquote>
+          </td>
+        </tr>
+        <tr>
+          <td width="50%" align="left">
+            <blockquote>
+              <p>float</p>
+            </blockquote>
+          </td>
+          <td width="50%" align="left">
+            <blockquote>
+              <p><span lang="ES-MX">
+      <a href="http://java.sun.com/products/j2se/1.4.1/docs/api/java/lang/Float.html" target="externalWindow"><code>java.lang.Float</code></a></span></p>
+            </blockquote>
+          </td>
+        </tr>
+        <tr>
+          <td width="50%" align="left">
+            <blockquote>
+              <p>double</p>
+            </blockquote>
+          </td>
+          <td width="50%" align="left"><span lang="ES-MX">
+      <blockquote>
+        <a href="http://java.sun.com/products/j2se/1.4.1/docs/api/java/lang/Double.html" target="externalWindow"><code>java.lang.Double</code></a>
+      </blockquote>
+            </span></td>
+        </tr>
+        <tr>
+          <td width="50%" align="left">
+            <blockquote>
+              <p>boolean</p>
+            </blockquote>
+          </td>
+          <td width="50%" align="left">
+            <blockquote>
+              <p><span lang="ES-MX">
+      <a href="http://java.sun.com/products/j2se/1.4.1/docs/api/java/lang/Boolean.html" target="externalWindow"><code>java.lang.Boolean</code></a></span></p>
+            </blockquote>
+          </td>
+        </tr>
+      </table>
+      </span>
+    </td>
+  </tr>
+  <tr>
+    <td width="74%" bgcolor="#000000" height="18"><font face="Verdana" color="#FFFFFF"><b>Material
+      de Apoyo</b></font></td>
+  </tr>
+  <tr>
+    <td width="74%" bgcolor="#FFFFFF" height="19">
+      <font face="Verdana" size="2">
+      <a href="mod_obj.ppt">Modelación Orientada a Objetos&nbsp;</a> </font>
+    </td>
+  </tr>
+  <tr>
+    <td width="74%" bgcolor="#000000" height="18">
+    <font face="Verdana" color="#FFFFFF" size="2"><b>Ejercicio</b></font></td>
+  </tr>
+  <tr>
+    <td width="74%" bgcolor="#FFFFFF" height="19">
+      <p align="justify"><font face="Verdana" size="2">1. Escribe el diagrama de Clases para una aplicación que requiere
+      resolver el problema de administrar la renta y venta de películas en un
+      Video Club, el cual tiene titulos nacionales y extranjeros, manejando
+      peliculas de VideoMax, MexiVideo, UltraVideo y otros. Los clientes pueden
+      rentar hasta 10 películas teniendo diferentes dias de vencimiento para
+      cada una de ellas. </font></p>
+      <p align="justify"><font face="Verdana" size="2">2. Escribe el diagrama de Clases para una aplicación que requiere
+      resolver el problema de administrar la renta de cuartos en un Hotel. Los
+      clientes pueden tener acceso al frigo bar del cuarto y pueden tener gastos
+      por concepto de piscina, restaurant, servicio a cuarto y
+      Spa.&nbsp;&nbsp;&nbsp;</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="74%" bgcolor="#000000" height="18"><font face="Verdana" color="#FFFFFF"><b>Ligas
+      sugeridas</b></font></td>
+  </tr>
+  <tr>
+    <td width="74%" bgcolor="#FFFFFF" height="19">
+      <p><a href="http://www.uml.org/">http://www.uml.org/</a></td>
+  </tr>
+</table>
+<p align="left"><font face="Verdana" size="2"><i><b><a href="CURSO-JAVA.htm">Regresar
+</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="M5-2Java.htm">Siguiente</a></b></i></font></p>
+
+</body>
+
+</html>

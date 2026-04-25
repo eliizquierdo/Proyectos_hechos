@@ -1,0 +1,7 @@
+EJERCICIOS PRÁCTICOS – BT TI (Plan 2023)
+
+1. Agregar campo edad y mostrarlo en resultado.jsp
+2. Validar que nombre no esté vacío
+3. Crear un segundo servlet para despedida
+4. Usar HttpSession para contar visitas
+5. Mostrar mensaje distinto según edad

@@ -1,0 +1,11 @@
+RÚBRICA – PROYECTO SERVLETS MVC (BT TI)
+
+Competencia técnica:
+- Uso correcto de MVC
+- Manejo de HttpServletRequest / Response
+- JSP sin lógica de negocio
+
+Desempeño:
+- Funciona correctamente
+- Código legible y ordenado
+- Explicación oral breve y técnica

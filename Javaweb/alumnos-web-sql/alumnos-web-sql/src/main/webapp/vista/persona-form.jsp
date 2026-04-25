@@ -1,34 +1,49 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
 <%
-  String baseURL = request.getContextPath();
+    String baseURL = request.getContextPath();
+    // Recupera el mensaje que el doGet puso como ATRIBUTO DE REQUEST (si existe un error de validación)
+    String mensaje = (String) request.getAttribute("mensaje"); 
 %>
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Agregar Persona</title>
-  <link rel="stylesheet" href="<%= baseURL %>/css/styles.css">
+    <meta charset="UTF-8">
+    <title>Agregar Persona</title>
+    <link rel="stylesheet" href="<%= baseURL %>/css/styles.css">
 </head>
 <body>
 <div class="form-container">
-  <h1>Agregar Persona</h1>
-  
-  <!-- POST al Servlet con action=agregar -->
-  <form action="<%= baseURL %>/persona" method="post">
-    <input type="hidden" name="action" value="agregar">
+    <h1>Agregar Persona</h1>
+    
+    <%
+        // Lógica para mostrar solo errores de validación/DAO
+        if (mensaje != null) {
+            if ("formato_invalido".equals(mensaje)) {
+    %>
+                <p class="msg-error">❌ Error de validación: El código debe ser un número válido.</p>
+    <%
+            } else if ("error_dao".equals(mensaje)) {
+    %>
+                <p class="msg-error">❌ Error al guardar: Ya existe una persona con ese código o falló la inserción.</p>
+    <%
+            }
+        }
+    %>
+    
+    <hr>
+    
+    <form action="<%= baseURL %>/persona" method="post">
+        <input type="hidden" name="action" value="agregar">
 
-    <label>Código</label>
-    <input type="number" name="codigo" required>
+        <label for="codigo">Código</label>
+        <input type="number" id="codigo" name="codigo" required>
 
-    <label>Nombre</label>
-    <input type="text" name="nombre" required>
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" required>
 
-     <label>Apellido</label>
-    <input type="text" name="apellido" required>
-
-    <button class="btn" type="submit">Guardar</button>
-    <a class="btn btn-secondary" href="<%= baseURL %>/persona">Volver</a>
-  </form>
+        <button class="btn" type="submit">Guardar</button>
+        <a class="btn btn-secondary" href="<%= baseURL %>/persona">Volver al Listado</a>
+    </form>
 </div>
 </body>
 </html>

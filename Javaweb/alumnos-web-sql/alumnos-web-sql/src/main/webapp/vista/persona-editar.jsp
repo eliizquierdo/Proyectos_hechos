@@ -25,9 +25,6 @@
     <label>Nombre</label>
     <input type="text" name="nombre" value="<%= persona.getNombre() %>" required>
 
-    <label>Apellido</label>
-    <input type="text" name="apellido" value="<%= persona.getApellido() %>" required>
-
     <button class="btn" type="submit">Actualizar</button>
     <a class="btn btn-secondary" href="<%= baseURL %>/persona">Volver</a>
   </form>

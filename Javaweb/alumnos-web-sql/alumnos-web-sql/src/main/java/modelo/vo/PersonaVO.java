@@ -4,16 +4,16 @@ public class PersonaVO {
     // Atributos
     private int cod;
     private String nombre;
-    private String apellido;
+   
 
     public PersonaVO() {
 
     }
 
-    public PersonaVO(int cod, String nombre, String apellido) {
+    public PersonaVO(int cod, String nombre) {
         this.cod = cod;
         this.nombre = nombre;
-        this.apellido = apellido;
+        
     }
 
     public int getCodigo() {
@@ -32,17 +32,11 @@ public class PersonaVO {
         this.nombre = nombre;
     }
 
-    public String getApellido() {
-        return apellido;
-    }
-
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
-    }
+   
 
     @Override
     public String toString() {
-        return "PersonaVO [cod=" + cod + ", nombre=" + nombre + ", apellido=" + apellido + "]";
+        return "PersonaVO [cod=" + cod + ", nombre=" + nombre + "]";
     }
 
 }

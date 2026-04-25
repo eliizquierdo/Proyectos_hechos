@@ -1,0 +1,38 @@
+package logica;
+
+public class Importado extends Articulo {
+private double impuesto;
+private int anioImportacion;
+public Importado() {
+	
+}
+public Importado(double impuesto, int anioImportacion, int c, String n, double pC, Fecha v) {
+	super(c, n, pC, v);
+	this.impuesto = impuesto;
+	this.anioImportacion = anioImportacion;
+}
+public double getImpuesto() {
+	return impuesto;
+}
+public void setImpuesto(double impuesto) {
+	this.impuesto = impuesto;
+}
+public int getAnioImportacion() {
+	return anioImportacion;
+}
+public void setAnioImportacion(int anioImportacion) {
+	this.anioImportacion = anioImportacion;
+}
+public double precioVenta() {
+	if (anioImportacion<=2008) {
+		return super.precioVenta()+(impuesto*80/100);
+	}
+	else
+		return super.precioVenta()+impuesto;
+}
+@Override
+public String toString() {
+	return super.toString()+"Importado [impuesto=" + impuesto + ", anioImportacion=" + anioImportacion + "]";
+}
+
+}

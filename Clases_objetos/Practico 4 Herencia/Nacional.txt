@@ -1,0 +1,45 @@
+package logica;
+
+public class Nacional extends Articulo {
+	private String departamento;
+	private boolean subsidiario;
+	public Nacional() {
+		
+	}
+	public Nacional(String departamento, boolean subsidiario, int c, String n, double pC, Fecha v) {
+		super(c, n, pC, v);
+		this.departamento = departamento;
+		this.subsidiario = subsidiario;
+	}
+	public String getDepartamento() {
+		return departamento;
+	}
+	public void setDepartamento(String departamento) {
+		this.departamento = departamento;
+	}
+	public boolean isSubsidiario() {
+		return subsidiario;
+	}
+	public void setSubsidiario(boolean subsidiario) {
+		this.subsidiario = subsidiario;
+	}
+	public double precioVenta() {
+		if (subsidiario==true) {
+		return super.precioVenta();
+		}
+		else {
+			if (departamento.equals("Montevideo")) {
+				return super.precioVenta()*15/100;
+			}
+			else
+				return super.precioVenta()*10/100;
+		}
+		}
+	@Override
+	public String toString() {
+		return super.toString()+"Nacional [departamento=" + departamento + ", subsidiario=" + subsidiario + "]";
+	}
+	
+	
+
+}

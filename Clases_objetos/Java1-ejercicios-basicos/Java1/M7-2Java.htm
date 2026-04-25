@@ -1,0 +1,242 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>Módulo 1</title>
+</head>
+
+<body>
+
+<table border="3" cellspacing="5" width="100%" id="AutoNumber1" cellpadding="5" height="280">
+  <tr>
+    <td width="74%" bgcolor="#000000" height="86">
+      <p align="left"><font face="Verdana" color="#FFFFFF"><b>Módulo 7:
+      Tópicos Avanzados en Java <img border="0" src="puronombreJava1.JPG" align="right" width="346" height="68"></b></font>
+      <p align="center">&nbsp;&nbsp;&nbsp; <font face="Verdana" color="#FFFFFF"><b>2.
+      Colecciones</b></font></td>
+  </tr>
+  <tr>
+    <td width="74%" height="12"><span lang="ES-MX">
+      <font face="Verdana" size="2">
+      <p>Una colección es una clase en Java que nos permite agrupar diferentes
+      elementos en una misma unidad. Es muy comun utilizarla cuando queremos
+      guardar diferentes elementos, como si usaramos un arreglo.</p>
+      <p>La gran ventaja de una colección es que no nos preocupamos por el
+      tamaño de elementos que tendrá, es decir vamos añadiéndole elementos
+      conforme lo necesitemos y no es necesario decir cuantos vamos a tener en
+      total.</p>
+      <p>La clase que nos ayuda a esto es la clase Vector, esta clase tiene
+      diferentes métodos que nos pueden ayudar a crear el vector (como
+      comúnmente se le llama al objeto de la clase), esta clase la utilizamos
+      de la biblioteca java.util, como lo muestra el siguiente ejemplo:</p>
+      <pre>import java.awt.*;
+import java.applet.*;
+import java.awt.event.*;
+import java.util.Vector;
+
+// &lt;applet width=&quot;400&quot; height=&quot;200&quot; code=&quot;AppletArreglos2&quot;&gt;&lt;/applet&gt;
+
+public class AppletArreglos2 extends Applet implements ActionListener{
+    	Label l1, l2;
+	    Button b1, b2,b3,b4;	
+	    TextField t1;
+	    TextArea ta1;
+	    Vector arreglo;
+
+        public AppletArreglos2() {
+			l1 = new Label(&quot;Dato a Añadir&quot;);
+			l2 = new Label(&quot;Texto para ver Arreglo&quot;);
+			t1 = new TextField();
+			ta1 = new TextArea(10,12);
+			b1 = new Button(&quot;Añade&quot;);
+			b2 = new Button(&quot;Muestra Vector&quot;);
+			b3 = new Button(&quot;Limpia Vector&quot;);
+			b4 = new Button(&quot;Limpia Campos&quot;);
+			add(l1);
+			add(t1);
+			add(l2);
+			add(ta1);
+			add(b1);
+			add(b2);
+			add(b3);
+			add(b4);
+			b1.addActionListener(this);
+			b2.addActionListener(this);
+			b3.addActionListener(this);
+			b4.addActionListener(this);
+			arreglo = new Vector();
+ 	    }
+	     
+	    public void actionPerformed(ActionEvent ae) {
+	        if (ae.getSource() == b1) {
+	                <b>arreglo.add(new Integer(t1.getText()))</b>;
+	                t1.setText(&quot;&quot;);   
+	         }
+	         if (ae.getSource() == b2) {
+	               <b>ta1.setText(arreglo.toString());</b>
+	         }
+	         if (ae.getSource() == b3) {
+	               arreglo = new Vector();
+	         }
+	         if (ae.getSource() == b4) {
+					t1.setText(&quot;&quot;);
+					ta1.setText(&quot;&quot;);
+	         }
+	    }
+}</pre>
+      <p>Este ejemplo es una nueva versión de la tomada de la sección de
+      arreglos, es importante que los compares, al ser ejecutado nos mostrará
+      lo siguiente (usado varias veces):</p>
+      <p align="center"><img border="0" src="M7-2Ja3.gif" width="408" height="269">&nbsp;&nbsp;
+      <img border="0" src="M7-2Ja4.gif" width="408" height="269"></p>
+      <p align="center">(Añadimos primero el 5 y luego el 8, y luego mostramos
+      el vector)</p>
+      <p align="center"><img border="0" src="M7-2Ja5.gif" width="408" height="269"></p>
+      <p>Aqui podemos observar que los valores se han ido añadiendo al vector
+      utilizando el método add :</p>
+      </font>
+      <p align="center"><font face="Courier" size="3">arreglo.add(new
+      Integer(t1.getText()));</font></p>
+      <font face="Verdana" size="2">
+      <p>Es importante aqui hacer notar que a diferencia del ejemplo que usamos
+      en el tema de arreglos, aqui estamos añadiendo un objeto de la clase
+      Integer (una clase de envoltura), porque la clase Vector solo acepta
+      objetos a añadir y no valores primitivos.</p>
+      <p>Para mostrar lo que tiene el vector hemos pasado todo el vector al
+      área de texto utilizando el método toString()</p>
+      <p align="center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      ta1.setText(</font><font face="Courier" size="3">arreglo</font><font face="Verdana" size="2">.toString());</p>
+      <p>Y es entonces que observamos como el método toString() en la clase
+      Vector, nos va dando los valores del objeto vector, separando por comas y
+      todos ellos entre corchetes.</p>
+      <p>Si quisieramos dejar estos valores por línea, debemos recurrir primero
+      al uso del método size() que es el que nos dice el número de elementos
+      en el vector (el cual se ajusta automáticamente al añadir o borrar
+      elementos), y utilizamos el metodo get(), para ir obteniendo cada elemento
+      del vector, donde al igual que en un arreglo empezamos con el elemento
+      cero (0) y terminamos con el n-esimo menos 1 (n-1), es decir si son 5
+      elementos vamos del cero al 4, veamos como quedaría el applet:</p>
+      <pre>import java.awt.*;
+import java.applet.*;
+import java.awt.event.*;
+import java.util.Vector;
+
+// &lt;applet width=&quot;400&quot; height=&quot;200&quot; code=&quot;AppletArreglos3&quot;&gt;&lt;/applet&gt;
+
+public class AppletArreglos3 extends Applet implements ActionListener{
+    	Label l1, l2;
+	    Button b1, b2,b3,b4;	
+	    TextField t1;
+	    TextArea ta1;
+	    Vector arreglo;
+
+        public AppletArreglos3() {
+			l1 = new Label(&quot;Dato a Añadir&quot;);
+			l2 = new Label(&quot;Texto para ver Arreglo&quot;);
+			t1 = new TextField();
+			ta1 = new TextArea(10,12);
+			b1 = new Button(&quot;Añade&quot;);
+			b2 = new Button(&quot;Muestra Vector&quot;);
+			b3 = new Button(&quot;Limpia Vector&quot;);
+			b4 = new Button(&quot;Limpia Campos&quot;);
+			add(l1);
+			add(t1);
+			add(l2);
+			add(ta1);
+			add(b1);
+			add(b2);
+			add(b3);
+			add(b4);
+			b1.addActionListener(this);
+			b2.addActionListener(this);
+			b3.addActionListener(this);
+			b4.addActionListener(this);
+			arreglo = new Vector();
+ 	    }
+	     
+	    public void actionPerformed(ActionEvent ae) {
+	        if (ae.getSource() == b1) {
+	                arreglo.add(new Integer(t1.getText()));
+	                t1.setText(&quot;&quot;);   
+	         }
+	         if (ae.getSource() == b2) {
+	               ta1.setText(&quot;&quot;);
+	               for (int i=0; i &lt; <b>arreglo.size()</b>; i++) {
+	                  ta1.append(&quot;&quot; + <b>arreglo.get(i)</b> + &quot;\n&quot;);
+	               }
+	         }
+	         if (ae.getSource() == b3) {
+	               <b>arreglo.removeAllElements()</b>;
+	         }
+	         if (ae.getSource() == b4) {
+					t1.setText(&quot;&quot;);
+					ta1.setText(&quot;&quot;);
+	         }
+	    }
+}</pre>
+      <p>Ejecutado quedaria:</p>
+      <p align="center"><img border="0" src="M7-2Ja3.gif" width="408" height="269">&nbsp;&nbsp;
+      <img border="0" src="M7-2Ja4.gif" width="408" height="269"></p>
+      <p align="center">(Añadimos primero el 5 y luego el 8, y luego mostramos
+      el vector)</p>
+      <p align="center"><img border="0" src="M7-2Ja6.gif" width="408" height="269"></p>
+      <p>Entonces observamos como el vector nos ayuda más que un arreglo, pues
+      no tenemos que estar previniendo el número de elementos a tener máximo,
+      y solo utilizamos el método size() para ver cuantos habrá, como el
+      segmento de código:</p>
+      </font>
+      <p><font face="Courier" size="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      ta1.setText(&quot;&quot;);<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      for (int i=0; i &lt; arreglo.size(); i++) {<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      ta1.append(&quot;&quot; + arreglo.get(i) + &quot;\n&quot;);<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      }</font></p>
+      <font face="Verdana" size="2"><p>El cual utilizando el arreglo.size()
+      sabrá hasta donde va a llegar&nbsp; (n-1) ya que es menor al tamaño, y
+      utilizando el método get() y el subíndice i, toma el objeto a desplegar.</p>
+      <p>Para borrar el vector, estamos haciendo uso del método
+      removeAllElements() el cual es parte de la clase Vector y nos sirve para
+      borrar todos los elementos del vector, esto automáticamente nos daria un
+      size() en cero, pues ya no hay elementos.</p>
+      <p>Es importante aqui hacer notar que si existiera alguna forma especial
+      de transformar a String el objeto (es decir un método toString() definido
+      para el) utilizariamos arreglo.get(i).toString()&nbsp;&nbsp;&nbsp; ya que&nbsp;&nbsp;
+      arreglo.get(i)&nbsp;&nbsp; sería un objeto, en este caso el toString() de
+      la clase Integer solo transforma a String el número entero.</p>
+      </font>
+      </span>
+    </td>
+  </tr>
+  <tr>
+    <td width="74%" bgcolor="#000000" height="18"><font face="Verdana" color="#FFFFFF"><b>Ejercicio</b></font></td>
+  </tr>
+  <tr>
+    <td width="74%" bgcolor="#FFFFFF" height="19">
+      <font face="Verdana" size="2">1. Toma el applet del último ejercicio, añade el botón Borrar, corrige
+      el texto Dato a Añadir por Dato a Añadir/Borrar y anade las
+      instrucciones necesarias para que al dar un clic en el botón Borrar, se
+      borre el número puesto en el texto, si es que existe en el Vector, si no
+      existe deberás de mandar un mensaje de error diciendo &quot;Ese número
+      no existe en el arreglo, no lo puedo borrar&quot;. </font>
+    </td>
+  </tr>
+  <tr>
+    <td width="74%" bgcolor="#000000" height="18"><font face="Verdana" color="#FFFFFF"><b>Ligas
+      sugeridas</b></font></td>
+  </tr>
+  <tr>
+    <td width="74%" bgcolor="#FFFFFF" height="19">
+      <p><font face="Verdana" size="2"><a href="http://java.sun.com/docs/books/tutorial/collections/">http://java.sun.com/docs/books/tutorial/collections/</a></font></td>
+  </tr>
+</table>
+<p align="left"><font face="Verdana" size="2"><i><b><a href="CURSO-JAVA.htm">Regresar
+</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="M7-3Java.htm">Siguiente</a></b></i></font></p>
+
+</body>
+
+</html>

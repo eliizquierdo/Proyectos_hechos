@@ -1,0 +1,748 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>Módulo 1</title>
+</head>
+
+<body>
+
+<table border="3" cellspacing="5" width="100%" id="AutoNumber1" cellpadding="5" height="7399">
+  <tr>
+    <td width="74%" bgcolor="#000000" height="86">
+      <p align="left"><font face="Verdana" color="#FFFFFF"><b>Módulo 1:
+      Introducción a la Programación Orientada a Objetos <img border="0" src="puronombreJava1.JPG" align="right" width="346" height="68"></b></font>
+      <p align="center">&nbsp;&nbsp;&nbsp; <font face="Verdana" color="#FFFFFF"><b>3.
+      Operaciones Básicas, Operadores y Lectura de Datos.</b></font></td>
+  </tr>
+  <tr>
+    <td width="74%" height="7019">
+    <p align="justify"><font face="Verdana" size="2"><b><u>Operaciones Básicas</u></b>
+    </font></p>
+      <p align="justify"><font face="Verdana" size="2">En java al igual que en C++ se tienen una serie de operadores que
+      ayudan a obtener cálculos, dependiendo de los valores a utilizar, Java
+      trabaja con los siguientes operadores:</font></p>
+      <p align="justify"><font face="Verdana" size="2">
+      <u><b>Operadores Aritméticos</b></u> </font></p>
+      <table width="381" align="center" border="1">
+        <tbody>
+          <tr>
+            <td width="187"><center><b><font size="2">Operador en Java</font></b></center></td>
+            <td width="178"><center><b><font size="2">Significado</font></b></center></td>
+          </tr>
+          <tr>
+            <td width="187"><center><font size="2">+</font></center></td>
+            <td width="178">
+              <p align="center"><font size="2">suma</font></p>
+            </td>
+          </tr>
+          <tr>
+            <td width="187"><center><font size="2">-</font></center></td>
+            <td width="178"><center><font size="2">resta</font></center></td>
+          </tr>
+          <tr>
+            <td width="187"><center><font size="2">*</font></center></td>
+            <td width="178"><center><font size="2">multiplicación</font></center></td>
+          </tr>
+          <tr>
+            <td width="187"><center><font size="2">/</font></center></td>
+            <td width="178"><center><font size="2">división</font></center></td>
+          </tr>
+          <tr>
+            <td width="187">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              %</td>
+            <td width="178"><center><font size="2">residuo</font></center></td>
+          </tr>
+        </tbody>
+      </table>
+      <table>
+        <tr>
+          <td>&nbsp;
+            <p align="justify"><font face="verdana" size="2">Todos los operadores
+            que se muestran en esta tabla son binarios; es decir, trabajan con
+            dos operandos.</font></p>
+            <font face="verdana" size="2">
+            <p align="justify">Los operadores <b>+</b>, <b>- </b>y <b>*</b>
+            funcionan de la manera conocida.</p>
+            <p align="justify">El operador <b>/</b> funciona de diferente manera si
+            trabaja con datos de tipo entero o de tipo flotante. Con datos de
+            tipo flotante</p>
+            <p align="justify">funciona de la manera tradicional; pero al
+            realizarse una división entre dos números enteros, el operador <b>/</b>
+            regresa el cociente de</p>
+            <p align="justify">la división entera; es decir, regresa la parte
+            entera del resultado (si hay fracción la elimina).</p>
+            <p align="left">Por ejemplo:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            2/3&nbsp; da como resultado 0<br>
+            pero&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            2.0/3.0 da como resultado&nbsp; 0.66666
+            <p align="left">Una manera de visualizar esto es a través de un
+            applet que dibuje el resultado de una operación entera, en este
+            caso utilizaremos el método drawString() como lo hicimos antes, y
+            hacemos uso del operador + que cuando es utilizado despues de un
+            string (cadena de caracteres) en Java funciona como concatenación.</p>
+            <p align="left">Tenemos entonces que la siguiente codificación:</p>
+            </font>
+            <blockquote>
+              <p align="left"><font size="2" face="Courier">import java.awt.*;<br>
+              import java.applet.*;<br>
+              <br>
+ // &lt;applet width="200" height="200" code="Pru">&lt;/applet><br>
+              <br>
+              public class Pru extends Applet {</font></p>
+              <p align="left"><font size="2" face="Courier">&nbsp;&nbsp;&nbsp; public void paint(Graphics g) {<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; int x;<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; x = 2 / 3;<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; g.drawString("2 / 3 = "+x, 100, 100);<br>
+              &nbsp;&nbsp;&nbsp; }<br>
+              }</font></p>
+            </blockquote>
+            <font face="verdana" size="2">
+            <p align="left">Dará como resultado:</p>
+            <p align="center"><img border="0" src="M1-3Ja3.gif" width="208" height="269"></p>
+            <p align="justify">Observa como utilizamos dentro del applet Pru.java
+            el comentario&nbsp; <font size="2" face="Courier">// &lt;applet width="200" height="200" code="Pru">&lt;/applet><br>
+            </font>Esto lo hacemos para no tener que hacer un archivo de tipo
+            HTML aparte, ya que un navegador o visualizador de applets lo que
+            requiere para ejecutar el applet es solamente la directiva
+            &lt;applet&gt;, hacemos uso de esta linea como comentario dentro del
+            applet, de manera que al compilar no da un error por esta
+            instruccion y al usar el visualizador de applets, se utiliza el
+            mismo archivo, como se muestra en la ventana de comandos de DOS
+            donde se compilo y uso la clase anterior:</p>
+            <p align="center"><img border="0" src="M1-3Ja2.gif" width="668" height="103"></p>
+            <p align="left">Al estar haciendo operaciones, si hay operandos de
+            diferentes tipos de datos, se convierten al tipo de datos más
+            amplio y el tipo del valor resultante es del tipo</p>
+            <p align="left">más amplio. Por ejemplo, si hay enteros y
+            flotantes, todos los números se convierten a flotantes y el
+            resultado se calcula como</p>
+            <p align="left">flotante.</p>
+            <p align="left">Por ejemplo:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            4/3.0&nbsp; da como resultado 1.3333<br>
+            &nbsp;
+            <p align="left">El operador <b>%</b> calcula el residuo de la división
+            entera y sólo existe para datos de tipo entero</p>
+            <p align="left">Por ejemplo:<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            10%3&nbsp;&nbsp;&nbsp;&nbsp; da como resultado 1</p>
+            <p align="left">&nbsp;</p>
+            <p align="left"><u><b>Otros operadores de Asignación</b></u></p>
+            <p align="left">En Java, como en C++, es posible abreviar algunas
+            expresiones de asignación como se muestra en la siguiente tabla:</p>
+            <div align="center">
+              <center>
+              <p></p>
+              </div>
+            </center></font>
+            <tbody>
+            </tbody>
+          </table>
+          <table style="BORDER-COLLAPSE: collapse" borderColor="#111111" cellSpacing="0" cellPadding="0" width="50%" border="2">
+            <tbody>
+              <tr>
+                <td width="50%">
+                  <p align="center"><b><font size="2">Operador</font></b></p>
+                </td>
+                <td width="50%">
+                  <p align="center"><b><font size="2">Expresión equivalente</font></b></p>
+                </td>
+              </tr>
+              <tr>
+                <td align="middle" width="50%"><font size="2">v + = e</font></td>
+                <td width="50%">
+                  <p align="center"><font size="2">v = v + e</font></p>
+                </td>
+              </tr>
+              <tr>
+                <td align="middle" width="50%"><font size="2">v - = e</font></td>
+                <td width="50%">
+                  <p align="center"><font size="2">v = v - e</font></p>
+                </td>
+              </tr>
+              <tr>
+                <td align="middle" width="50%"><font size="2">v * = e</font></td>
+                <td width="50%">
+                  <p align="center"><font size="2">v = v * e</font></p>
+                </td>
+              </tr>
+              <tr>
+                <td align="middle" width="50%"><font size="2">v / = e</font></td>
+                <td width="50%">
+                  <p align="center"><font size="2">v = v / e</font></p>
+                </td>
+              </tr>
+              <tr>
+                <td align="middle" width="50%"><font size="2">v % = e</font></td>
+                <td width="50%">
+                  <p align="center"><font size="2">v = v % e</font></p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div>
+          </div>
+          <p align="left"><u><b>Otros Operadores aritméticos</b></u></p>
+          <p align="left">En Java, al igual que en C++, existen también los
+          siguientes operadores aritméticos:</p>
+          <p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ++
+          incremento<br>
+          <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -- decremento</p>
+          <p align="left">Es decir:<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; x++
+          ó ++x&nbsp; es equivalente a x = x+1</p>
+          <p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          x-- ó --x&nbsp; es equivalente a x = x-1</p>
+          <p align="left">Estos operadores son unitarios, es decir, trabajan con
+          un solo operando y solamente se pueden utilizar con variables de tipo<br>
+          <br>
+          entero.</p>
+          <p align="left">Los operadores se pueden utilizar antes o después del
+          nombre de la variable y funcionan de diferente manera:</p>
+          <ul>
+            <li>
+              <p align="left">Si se ponen antes, primero se realiza la operación
+              (incremento o decremento) y luego se utiliza el valor de la
+              variable en la<br>
+              <br>
+              expresión en la que se encuentre.<br>
+              <br>
+              &nbsp;</p>
+            <li>
+              <p align="left">Si se pone después, primero se utiliza el valor
+              de la variable en la expresión y luego se lleva a cabo la operación
+              (incremento<br>
+              <br>
+              o decremento).</p>
+            </li>
+          </ul>
+          <p align="left">Por ejemplo:</p>
+          <p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          Supón que a = 10 y c = 4</p>
+          <p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          La operación&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; v = a * c++;&nbsp;&nbsp;&nbsp;&nbsp;
+          v toma el valor de 40 y c queda con el valor de 5</p>
+          <p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          La operación&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; v = a * ++c;&nbsp;&nbsp;&nbsp;&nbsp;
+          v toma el valor de 50 y c queda con el valor de 5</p>
+          <p align="left">&nbsp;</p>
+          <p align="left"><font face="Verdana" size="2"><u><b>Jerarquía de los operadores aritméticos</b></u></font></p>
+          <div align="center">
+            <center>
+            <table style="BORDER-COLLAPSE: collapse" borderColor="#111111" cellSpacing="0" cellPadding="0" width="71%" border="1">
+              <tbody>
+                <tr>
+                  <td width="15%">
+                    <p align="center"><b><font size="2" face="Verdana">Prioridad</font></b></p>
+                  </td>
+                  <td width="36%">
+                    <p align="center"><span lang="es-mx">
+                    <font face="Verdana" size="2"><b><font size="2">Operadores</font></b></font></span></p>
+                  </td>
+                  <td width="99%">
+                    <p align="center"><b><font size="2" face="Verdana">Asociatividad</font></b></p>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="middle" width="15%"><font size="2" face="Verdana">1</font></td>
+                  <td align="middle" width="36%"><font size="2" face="Verdana">( )</font></td>
+                  <td align="left" width="99%"><font size="2" face="Verdana">&nbsp;Empezando
+                    por los paréntesis más internos</font></td>
+                </tr>
+                <tr>
+                  <td align="middle" width="15%"><font size="2" face="Verdana">2</font></td>
+                  <td align="middle" width="36%"><font size="2" face="Verdana">++, --,
+                    +(positivo), - (negativo)</font></td>
+                  <td align="left" width="99%"><font size="2" face="Verdana">&nbsp;De derecha a
+                    izquierda, ++ y --&nbsp; dependiendo de la posición</font></td>
+                </tr>
+                <tr>
+                  <td align="middle" width="15%"><font size="2" face="Verdana">3</font></td>
+                  <td align="middle" width="36%"><span lang="es-mx">
+                  <font face="Verdana" size="2">*,/,%</font></span></td>
+                  <td align="left" width="99%"><span lang="es-mx">
+                  <font face="Verdana" size="2">&nbsp;D<font size="2">e
+                    izquierda a derecha</font></font></span></td>
+                </tr>
+                <tr>
+                  <td align="middle" width="15%"><font size="2" face="Verdana">4</font></td>
+                  <td align="middle" width="36%"><font size="2" face="Verdana">+, -</font></td>
+                  <td align="left" width="99%"><span lang="es-mx">
+                  <font size="2" face="Verdana">&nbsp;De
+                    izquierda a derecha</font></span></td>
+                </tr>
+                <tr>
+                  <td align="middle" width="15%"><font size="2" face="Verdana">5</font></td>
+                  <td align="middle" width="36%"><font size="2" face="Verdana">=,+=,-=,*=,
+                    /=,%=</font></td>
+                  <td align="left" width="99%"><font size="2" face="Verdana">&nbsp;De derecha a
+                    izquierda</font></td>
+                </tr>
+              </tbody>
+            </table>
+            </center>
+          </div>
+          <p align="left">&nbsp;</p>
+          <p align="left"><font face="Verdana" size="2"><u><b>Algunos Métodos Matemáticas Predefinidos</b></u></font></p>
+      <p align="left"><font face="Verdana" size="2">Java contiene una serie de métodos matemáticos que
+          puedes utilizar en tus clases, son tomados de la clase Math, esta
+      viene dentro del paquete java.lang, entonces para poder tomarlos dentro de
+      una clase debes de usar import java.lang.Math, algunos de los métodos a
+      utilizar son:</font></p>
+      <p align="left"><font face="Verdana" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; public final static double <b>e</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      da el valor de e.</font></p>
+      <p align="left"><font face="Verdana" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; public final static double <b>PI</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      da el valor de pi.</font></p>
+      <p align="left"><font face="Verdana" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; public static int <b>abs</b>(int a)&nbsp;&nbsp;
+      da el valor absoluto de un entero dado.</font></p>
+      <p align="left"><font face="Verdana" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; public static long <b>abs</b>(float a)&nbsp;
+      da el valor absoluto de un numero de punto flotante.</font></p>
+      <p align="left"><font face="Verdana" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; public static double <b>cos</b>(double a)&nbsp;&nbsp;&nbsp;
+      que te da el coseno de un valor de doble precisión.</font></p>
+      <p align="left"><font face="Verdana" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; public static double <b>exp</b>(double a)&nbsp;&nbsp;
+      te da el valor de e<sup>a</sup> para un valor a de doble precisión.</font></p>
+      <p align="left"><font face="Verdana" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; public static double <b>pow</b>(double a, double b)&nbsp;
+      te da el valor de a<sup>b</sup> para a y b de doble precisión.</font></p>
+      <p align="left"><font face="Verdana" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; public static double <b>sqrt</b>(double a)&nbsp;
+      obtiene el valor de la raíz cuadrada de un valor a de doble precisión.</font></p>
+          <p><font face="Verdana" size="2"><u><b>Operadores Relacionales</b></u></p>
+          <p>Los operadores relacionales que tiene Java son :</p>
+          <div align="center">
+            <center>
+            <table style="BORDER-COLLAPSE: collapse" borderColor="#111111" cellSpacing="0" cellPadding="0" width="40%" border="1">
+              <tbody>
+                <tr>
+                  <td width="50%">
+                    <p align="center"><b><font size="2">Operador en Java</font></b></p>
+                  </td>
+                  <td width="50%">
+                    <p align="center"><b><font size="2">Significado</font></b></p>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="middle" width="50%"><font size="2">==</font></td>
+                  <td width="50%"><font size="2">&nbsp; Igual</font></td>
+                </tr>
+                <tr>
+                  <td align="middle" width="50%"><font size="2">!=</font></td>
+                  <td width="50%"><font size="2">&nbsp; Diferente</font></td>
+                </tr>
+                <tr>
+                  <td align="middle" width="50%"><font size="2">&lt;</font></td>
+                  <td width="50%"><font size="2">&nbsp; Menor que</font></td>
+                </tr>
+                <tr>
+                  <td align="middle" width="50%"><font size="2">&gt;</font></td>
+                  <td width="50%"><font size="2">&nbsp; Mayor que</font></td>
+                </tr>
+                <tr>
+                  <td align="middle" width="50%"><font size="2">&lt;=</font></td>
+                  <td width="50%"><font size="2">&nbsp; Menor o igual que</font></td>
+                </tr>
+                <tr>
+                  <td align="middle" width="50%"><font size="2">&gt;=</font></td>
+                  <td width="50%"><font size="2">&nbsp; Mayor o igual que</font></td>
+                </tr>
+              </tbody>
+            </table>
+            </center>
+          </div>
+          <p><u><b>Operadores Lógicos</b></u></p>
+          <p>Los operadores lógicos que maneja Java son:</p>
+          <div align="center">
+            <center>
+            <table style="BORDER-COLLAPSE: collapse" borderColor="#111111" cellSpacing="0" cellPadding="0" width="30%" border="1">
+              <tbody>
+                <tr>
+                  <td width="50%">
+                    <p align="center"><b><font size="2">Operador en C++</font></b></p>
+                  </td>
+                  <td width="50%">
+                    <p align="center"><b><font size="2">Significado</font></b></p>
+                  </td>
+                </tr>
+                <tr>
+                  <td width="50%">
+                    <p align="center"><font size="2">||</font></p>
+                  </td>
+                  <td width="50%">
+                    <p align="center"><font size="2">or</font></p>
+                  </td>
+                </tr>
+                <tr>
+                  <td width="50%">
+                    <p align="center"><font size="2">&amp;&amp;</font></p>
+                  </td>
+                  <td width="50%">
+                    <p align="center"><font size="2">and</font></p>
+                  </td>
+                </tr>
+                <tr>
+                  <td width="50%">
+                    <p align="center"><font size="2">!</font></p>
+                  </td>
+                  <td width="50%">
+                    <p align="center"><font size="2">not</font></p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            </center>
+          </div>
+          <p>&nbsp;&nbsp;</p>
+          <p><u><b>Ejemplos de construcción de expresiones boleanas</b></u></p>
+          <p>Java maneja el tipo de variable boolean, el cual puede almacenar un
+          valor de verdadero (true) o de falso (false). Este valor se obtiene de
+          la comparación de valores y el uso de los operadores lógicos
+          revisados anteriormente. A continuación se dan una serie de ejemplos
+          de expresiones.</p>
+          <p>Expresión para saber si el número asignado a la variable entera
+          num (que tiene un 13) es par:</p>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; num % 2 == 0</p>
+          <p>Esto puede asignarse a una variable boleana y visualizarse en un
+          applet para entender como funciona:</p>
+          <p align="center"><img border="0" src="M1-3Ja4.gif" width="208" height="269"></p>
+          <p>El applet correspondiente sería:</p>
+          </font>
+          <blockquote>
+            <p><font size="2" face="Courier">import java.awt.*;<br>
+            import java.applet.*;<br>
+            <br>
+ // &lt;applet width="200" height="200" code="Pru2">&lt;/applet><br>
+            <br>
+            public class Pru2 extends Applet {<br>
+            <br>
+            <br>
+            &nbsp;&nbsp;&nbsp; public void paint(Graphics g) {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; boolean b;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; int num = 13;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; b = num % 2 == 0;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; g.drawString("num =  "+num + " igual a cero? =" + b, 0, 100);<br>
+            &nbsp;&nbsp;&nbsp; }<br>
+            <br>
+            }<br>
+            </font></p>
+          </blockquote>
+          <font face="Verdana" size="2">
+          <p>Expresión para saber si un número A está en el rango 5 a 300
+          incluyendo los extremos</p>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; num &gt; = 5&nbsp;
+          &amp;&amp;&nbsp; num &lt;=300<br>
+          </p>
+          <p><b><u>Lectura de Datos</u></b>
+          </p>
+          <p>Dentro de un applet es sencillo tomar algún dato del usuario para
+          realizar algún cálculo, esto se hace a través de crear un objeto de
+          la clase TextField, el cual sirve para que el usuario telcee algun
+          dato, dentro de la clase TextField existen diferentes métodos, es
+          necesario utilizar el método getText() para tomar el dato del usuario
+          y este método regresa un objeto de la clase String (cadena de
+          caracteres), el cual se debe pasar a entero o número de punto
+          flotante, utilizando la clase Integer o utilizando la clase Double.
+          </p>
+          <p>Dentro de un Applet el método paint nos sirve para dibujar, en el
+          constructor creamos objetos de la clases de elementos de interfaz
+          gráfica, como TextField, TextArea, Label, Button, etc.
+          </p>
+          <p>Cuando tomamos un dato del usuario, la manera que este le dice al
+          applet que ya ha introducido el dato y quiere hacer el cálculo es
+          dando un clic a un botón, el cual es creado dentro del applet por
+          medio de la clase Button, para poder introducir las instrucciones para
+          hacer algún cálculo cuando el usuario ya dio clic en el botón,
+          debemos introducir éstas en el método actionPerformed, este método
+          pertenece a la clase ActionListener, es entonces que la clase de
+          aplicación que hereda del applet, debe implementar la clase
+          ActionListener para poder utilizar este método y dar instrucciones
+          para cuando se da clic en el botón.
+          </p>
+          <p>Presentaremos un applet sencillo en el que se toma un número del
+          usuario y cuando el de un clic aparecerá el cuadrado de ese número
+          dibujado:
+          </p>
+          </font>
+    <p style="text-indent: 0; line-height: 100%; margin-top: 0; margin-bottom: 0">
+          <font face="Courier" size="2">
+          import java.awt.*;
+          </font>
+    </p>
+    <p style="text-indent: 0; line-height: 100%; margin-top: 0; margin-bottom: 0">
+          <font face="Courier" size="2">
+          import java.applet.*;
+          </font>
+    </p>
+    <p style="text-indent: 0; line-height: 100%; margin-top: 0; margin-bottom: 0">
+          <font face="Courier" size="2">
+          import java.awt.event.*;
+          </font>
+    </p>
+    <p style="text-indent: 0; line-height: 100%; margin-top: 0; margin-bottom: 0">&nbsp;</p>
+    <p style="text-indent: 0; line-height: 100%; margin-top: 0; margin-bottom: 0"><font size="2" face="Courier">//
+    &lt;applet width=&quot;200&quot; height=&quot;200&quot;
+    code=&quot;AppletDaCuadrado&quot;&gt;&lt;/applet&gt;</font></p>
+    <p style="text-indent: 0; line-height: 100%; margin-top: 0; margin-bottom: 0">&nbsp;</p>
+    <p style="text-indent: 0; line-height: 100%; margin-top: 0; margin-bottom: 0">
+          <font face="Courier" size="2">
+          public class AppletDaCuadrado extends Applet implements ActionListener
+          {
+          </font>
+    </p>
+    <p style="text-indent: 0; line-height: 100%; margin-top: 0; margin-bottom: 0">
+          <font face="Courier" size="2">
+          &nbsp;&nbsp; TextField t;
+          </font>
+    </p>
+    <p style="text-indent: 0; line-height: 100%; margin-top: 0; margin-bottom: 0">
+          <font face="Courier" size="2">
+          &nbsp;&nbsp; Button b;
+          </font>
+    </p>
+    <font SIZE="4" face="Verdana">
+    <p style="text-indent: 0; line-height: 100%; margin-top: 0; margin-bottom: 0">&nbsp;</p>
+    </font>
+    <p style="text-indent: 0; line-height: 100%; margin-top: 0; margin-bottom: 0">
+          <font face="Courier" size="2">
+          &nbsp;&nbsp; public AppletDaCuadrado() {
+          </font>
+    </p>
+    <p style="text-indent: 0; line-height: 100%; margin-top: 0; margin-bottom: 0">
+          <font face="Courier" size="2">
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; t = new TextField();
+          </font>
+    </p>
+    <p style="text-indent: 0; line-height: 100%; margin-top: 0; margin-bottom: 0">
+          <font face="Courier" size="2">
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; b = new Button(&quot;Calcula&quot;);
+          </font>
+    </p>
+    <p style="text-indent: 0; line-height: 100%; margin-top: 0; margin-bottom: 0">
+          <font face="Courier" size="2">
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; add(t);
+          </font>
+    </p>
+    <p style="text-indent: 0; line-height: 100%; margin-top: 0; margin-bottom: 0">
+          <font face="Courier" size="2">
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; add(b);
+          </font>
+    </p>
+    <p style="text-indent: 0; line-height: 100%; margin-top: 0; margin-bottom: 0">
+          <font face="Courier" size="2">
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; b. addActionListener(this);
+          </font>
+    </p>
+    <p style="text-indent: 0; line-height: 100%; margin-top: 0; margin-bottom: 0">
+          <font face="Courier" size="2">
+          &nbsp;&nbsp; }
+          </font>
+    </p>
+    <p style="text-indent: 0; line-height: 100%; margin-top: 0; margin-bottom: 0">
+          <font face="Courier" size="2">
+          &nbsp;&nbsp; public void paint(Graphics g) {
+          </font>
+    </p>
+    <p style="text-indent: 0; line-height: 100%; margin-top: 0; margin-bottom: 0">
+          <font face="Courier" size="2">
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; int num =
+          Integer.parseInt(t.getText());
+          </font>
+    </p>
+    <p style="text-indent: 0; line-height: 100%; margin-top: 0; margin-bottom: 0">
+          <font face="Courier" size="2">
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; g.drawString(&quot;Cuadrado =
+          &quot;+num*num, 100, 100);
+          </font>
+    </p>
+    <p style="text-indent: 0; line-height: 100%; margin-top: 0; margin-bottom: 0">
+          <font face="Courier" size="2">
+          &nbsp;&nbsp; }
+          </font>
+    </p>
+    <p style="text-indent: 0; line-height: 100%; margin-top: 0; margin-bottom: 0">
+          <font face="Courier" size="2">
+          &nbsp;&nbsp; public void actionPerformed(ActionEvent ae) {
+          </font>
+    </p>
+    <p style="text-indent: 0; line-height: 100%; margin-top: 0; margin-bottom: 0">
+          <font face="Courier" size="2">
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; repaint();
+          </font>
+    </p>
+    <p style="text-indent: 0; line-height: 100%; margin-top: 0; margin-bottom: 0">
+          <font face="Courier" size="2">
+          &nbsp;&nbsp; }
+          </font>
+    </p>
+    <p style="text-indent: 0; line-height: 100%; margin-top: 0; margin-bottom: 0">
+          <font face="Courier" size="2">
+          }
+          </font>
+    </p>
+    <p><font size="3">La manera en la que se presenta este applet es la
+    siguiente:</font></p>
+    <p align="center"><img border="0" src="M1-3Ja6.gif" width="208" height="269"></p>
+    <p align="justify"><font size="2" face="Verdana">Analicemos un poco esto a detalle, la clase Applet tiene
+    el método paint para dibujar, y el método actionPerformed() para llevar a
+    cabo las instrucciones cuando alguna acción se de, en este caso se haga
+    clic en un botón. Para poder hacer que un applet tenga elementos de
+    interfaz gráfica, estos deben ser creados utilizando la clase deseada
+    (TextField, TextArea, Button, etc) y deben ser añadidos a la aplicación a
+    través del método add (para que aparezcan en la ventana del applet), todo
+    esto se hace en el constructor del applet, de esa manera cuando se ejecute
+    el applet, se crean los objetos de interfaz gráfica y se presentan en la
+    ventana del applet.&nbsp;</font></p>
+    <p align="justify"><font size="2" face="Verdana">La manera en la que se pueda hacer para que se ejecute
+    alguna instrucción, con la acción de un botón, es primero añadirlo, pero
+    además hacer que este elemento pueda ser escuchado, es decir saber cuando
+    el usuario da un clic en el, al momento de estar ejecutando el applet, esto
+    se hace a través del método addActionListener(this), en la línea&nbsp;</font></p>
+    <p align="justify"><font face="Verdana" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    b.addActionListener(this);</font></p>
+    <p align="justify"><font size="2" face="Verdana">Aqui estamos diciendo que el botón debe ser escuchado en
+    este clase de aplicación, de este manera cuando el usuario de un clic,
+    entonces el control de la aplicación pasara al método actionPerformed() y
+    se ejecutarán las intrucciones puestas en el.</font></p>
+    <p><font size="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <font face="Courier">repaint();</font></font></p>
+    <p align="justify"><font size="2" face="Verdana">Esta instrucción lo que hace es hacer que se vuelva a
+    ejecutar el método paint(), para que aparezca el mensaje Cuadrado = y el
+    valor del cuadrado del número dado. Ahora porque tenemos que hacer esto,
+    debido a que el método paint() solo se ejecuta cuando se mueve la ventana
+    del applet, cuando se abre y se cierra, pero no en todo momento, entonces el
+    método repaint() nos sirve para que se repinte lo que queremos y en este
+    caso cuando el usuario de un clic en el botón.</font></p>
+      <p align="justify"><font size="2" face="Verdana">Utilizamos el método parseInt() de la clase Integer
+      para poder pasar el valor String (cadena de caracteres) del texto que
+      tiene el número dado por el usuario, a un número entero que pueda
+      servirnos posteriormente para hacer algún cálculo.</font></p>
+    <p align="justify"><font size="2" face="Verdana">Ahora la realidad es que el método paint es para dibujar
+    y no para dar respuestas a cálculos, entonces lo mejor seria no utilizar el
+    método paint() en este caso, sino utilizar otros elementos de interfaz
+    gráfica para mostrar los cálculos, esto será en el siguiente applet:</font></p>
+    <p style="line-height: 100%; margin-top: 0; margin-bottom: 0"><font size="2"><font face="Courier">import
+    java.awt.*;</font></font></p>
+    <p style="line-height: 100%; margin-top: 0; margin-bottom: 0"><font size="2"><font face="Courier">import
+    java.applet.*;</font></font></p>
+    <p style="line-height: 100%; margin-top: 0; margin-bottom: 0"><font size="2"><font face="Courier">import
+    java.awt.event.*;</font></font></p>
+    <p style="line-height: 100%; margin-top: 0; margin-bottom: 0"><font face="Courier" size="2">import
+    java.lang.Math;</font></p>
+    <p style="line-height: 100%; margin-top: 0; margin-bottom: 0">&nbsp;</p>
+    <p style="line-height: 100%; margin-top: 0; margin-bottom: 0"><font face="Courier" size="2">//
+    &lt;applet width=&quot;200&quot; height=&quot;200&quot;
+    code=&quot;AppletCuadrado&quot;&gt;&lt;/applet&gt;</font></p>
+    <p style="line-height: 100%; margin-top: 0; margin-bottom: 0">&nbsp;</p>
+    <p style="line-height: 100%; margin-top: 0; margin-bottom: 0"><font size="2"><font face="Courier">public
+    class AppletCuadrado extends Applet implements ActionListener {</font></font></p>
+    <p style="line-height: 100%; margin-top: 0; margin-bottom: 0"><font face="Courier" size="2">&nbsp;&nbsp;
+    Label l1, l2;</font></p>
+    <p style="line-height: 100%; margin-top: 0; margin-bottom: 0"><font face="Courier" size="2">&nbsp;&nbsp;
+    TextField t1, t2;</font></p>
+    <p style="line-height: 100%; margin-top: 0; margin-bottom: 0"><font face="Courier" size="2">&nbsp;&nbsp;
+    Button b;</font></p>
+    <font SIZE="4">
+    <p style="line-height: 100%; margin-top: 0; margin-bottom: 0">&nbsp;</p>
+    </font>
+    <p style="line-height: 100%; margin-top: 0; margin-bottom: 0"><font size="2"><font face="Courier">&nbsp;&nbsp;
+    public AppletCuadrado() {</font></font></p>
+    <p style="line-height: 100%; margin-top: 0; margin-bottom: 0"><font face="Courier" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    l1 = new Label(&quot;Numero&quot;);</font></p>
+    <p style="line-height: 100%; margin-top: 0; margin-bottom: 0"><font size="2"><font face="Courier">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    t1 = new TextField();</font></font></p>
+    <p style="line-height: 100%; margin-top: 0; margin-bottom: 0"><font face="Courier" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    l2 = new Label(&quot;Cuadrado&quot;);</font></p>
+    <p style="line-height: 100%; margin-top: 0; margin-bottom: 0"><font size="2"><font face="Courier">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    t2 = new TextField();</font></font></p>
+    <p style="line-height: 100%; margin-top: 0; margin-bottom: 0"><font face="Courier" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    b = new Button(&quot;Calcula&quot;);</font></p>
+    <p style="line-height: 100%; margin-top: 0; margin-bottom: 0"><font face="Courier" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    add(l1);</font></p>
+    <p style="line-height: 100%; margin-top: 0; margin-bottom: 0"><font face="Courier" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    add(t1);</font></p>
+    <p style="line-height: 100%; margin-top: 0; margin-bottom: 0"><font face="Courier" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    add(l2);</font></p>
+    <p style="line-height: 100%; margin-top: 0; margin-bottom: 0"><font face="Courier" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    add(t2);</font></p>
+    <p style="line-height: 100%; margin-top: 0; margin-bottom: 0"><font face="Courier" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    add(b);</font></p>
+    <p style="line-height: 100%; margin-top: 0; margin-bottom: 0"><font size="2"><font face="Courier">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    b. addActionListener(this);</font></font></p>
+    <p style="line-height: 100%; margin-top: 0; margin-bottom: 0"><font face="Courier" size="2">&nbsp;&nbsp;
+    }</font></p>
+    <p style="line-height: 100%; margin-top: 0; margin-bottom: 0"><font face="Courier" size="2">&nbsp;&nbsp;
+    public void actionPerformed(ActionEvent ae) {</font></p>
+    <p style="line-height: 100%; margin-top: 0; margin-bottom: 0"><font size="2"><font face="Courier">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    double num = Double.parseDouble(t1.getText());</font></font></p>
+    <p style="line-height: 100%; margin-top: 0; margin-bottom: 0"><font size="2"><font face="Courier">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    t2.setText(&quot;&quot;+Math.pow(num,2.0));</font></font></p>
+    <p style="line-height: 100%; margin-top: 0; margin-bottom: 0"><font face="Courier" size="2">&nbsp;&nbsp;
+    }</font></p>
+    <p style="line-height: 100%; margin-top: 0; margin-bottom: 0"><font face="Courier" size="2">}</font></p>
+    <p style="line-height: 100%; margin-top: 0; margin-bottom: 0">&nbsp;</p>
+    <p style="line-height: 100%; margin-top: 0; margin-bottom: 0"><font size="3">El
+    cual al ejecutar muestra lo siguiente:</font></p>
+    <p align="center"><img border="0" src="M1-3Ja5.gif" width="208" height="269"></p>
+          <font face="Verdana" size="2">
+          <p>Utilizamos el método parseDouble de la clase Double, para pasar de
+          un String a un valor primitivo de doble precisión (como lo hicimos en el ejemplo
+          anterior con un entero), usamos un valor de doble precisión, porque
+          ahora hicimos uso del método pow() de la clase Math, para hacer el
+          cálculo del cuadrado. Ahora no hacemos uso del método paint(), y utilizamos
+          el método setText() para poder pasar el valor calculado al objeto de
+          la clase TextField, todo esto se hace dentro del método
+          actionPerformed() y como no se esta dibujando el resultado, no tenemos
+          que hacer uso del método paint() o repaint().
+          </p>
+          <p>El uso del método pow() se hace tomando solo el nombre de la clase
+          Math, haciendo Math.pow(num, 2.0), esto se hace debido a que el
+          método es estático, lo cual significa que el método se usa sin
+          tener que crear un objeto de la clase Math, solo haciendo uso del
+          nombre de la clase antes del método.
+          </p>
+          <p>En esta clase tambien hicimos uso de objetos de la clase Label,
+          para poder definir que es lo que estará en el texto de enseguida.
+          </p>
+          </font>
+  </td>
+  </tr>
+  <tr>
+    <td width="74%" bgcolor="#000000" height="18"><font face="Verdana" color="#FFFFFF"><b>Ejercicio</b></font></td>
+  </tr>
+  <tr>
+    <td width="74%" bgcolor="#FFFFFF" height="95">
+      <font face="Verdana" size="2">1. Crea un applet que tome dos datos y te de en un tercero el residuo de
+      la división del primer número sobre el segundo al momento de dar un clic
+      en el botón llamado RESIDUO, como se muestra en la figura: </font>
+      <p align="center"><img border="0" src="M1-3Ja7.gif" width="133" height="283"></p>
+      <p align="justify"><font face="Verdana" size="2">2. Crea un applet que tome los datos de tres campos texto (TextField) y
+      obtenga el promedio de los tres números y lo coloque en un cuarto texto
+      (Text Field), los tres campos tomaran números que serán de punto
+      flotante, como lo muestra la figura:</font></p>
+      <p align="center"><img border="0" src="M1-3Ja8.gif" width="237" height="265"></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="74%" bgcolor="#000000" height="18"><font face="Verdana" color="#FFFFFF"><b>Ligas
+      sugeridas</b></font></td>
+  </tr>
+  <tr>
+    <td width="74%" bgcolor="#FFFFFF" height="55"><a href="http://java.sun.com/docs/books/tutorial/java/nutsandbolts/opsummary.html">http://java.sun.com/docs/books/tutorial/java/nutsandbolts/opsummary.html</a>
+      <p><a href="http://java.sun.com/docs/books/tutorial/java/nutsandbolts/relational.html">http://java.sun.com/docs/books/tutorial/java/nutsandbolts/relational.html</a></p>
+      <p><a href="http://java.sun.com/j2se/1.4.2/docs/api/index.html">http://java.sun.com/j2se/1.4.2/docs/api/index.html</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      buscar&nbsp; Math, Integer, Double.</p>
+    </td>
+  </tr>
+</table>
+<p align="left"><font face="Verdana" size="2"><i><b><a href="CURSO-JAVA.htm">Regresar
+</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="M2-1Java.htm">Siguiente módulo</a></b></i></font></p>
+
+</body>
+
+</html>

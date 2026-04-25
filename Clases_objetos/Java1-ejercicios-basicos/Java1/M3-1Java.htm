@@ -1,0 +1,491 @@
+<!-- saved from url=(0022)http://internet.e-mail -->
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>Módulo 1</title>
+</head>
+
+<body>
+
+<table border="3" cellspacing="5" width="100%" id="AutoNumber1" cellpadding="5">
+  <tr>
+    <td width="74%" bgcolor="#000000" height="55">
+      <p align="left"><font face="Verdana" color="#FFFFFF"><b>Módulo 3:
+      Métodos &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <img border="0" src="puronombreJava1.JPG" align="right" width="346" height="68"></b></font>
+      <p align="left"><b><font face="Verdana" color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;
+      1. </font></b><b><font face="Verdana" color="#FFFFFF">Declaración y
+      Definición de Métodos</font></b></td>
+  </tr>
+</table>
+
+<table border="3" cellspacing="5" width="100%" id="AutoNumber1" cellpadding="5" height="2860">
+  <tr>
+    <td width="74%" height="2683">
+      <p><span lang="es-mx"><u><font face="Verdana" size="2"><b><br>
+      Métodos
+      </b></font></u></span></p>
+      <p><span lang="es-mx"><font size="2" face="Verdana">Un método es algo muy utilizado en
+      la programación de Java y en POO representa las conductas de los objetos
+      que se traten.</font></span></p>
+      <p><span lang="es-mx"><font size="2" face="Verdana">El método nos ayuda a definir un
+      cambio en algún objeto y es importante que entendamos como funciona un
+      método ya definido y como utilizarlo al hacer alguna aplicación o un
+      applet.</font></span></p>
+      <p><span lang="es-mx"><font size="2" face="Verdana">Volvemos en este momento a la
+      definición de la clase Punto vista al inicio:</font></span></p>
+      <p style="line-height: 100%; margin-top: 0; margin-bottom: 0">
+      <font face="Verdana" size="2">public
+      class Punto {</font></p>
+      <p style="line-height: 100%; margin-top: 0; margin-bottom: 0">
+      <font face="Verdana" size="2">&nbsp;&nbsp;&nbsp;
+      private int x;&nbsp; //&nbsp; variable para la coordenada en x</font></p>
+      <p style="line-height: 100%; margin-top: 0; margin-bottom: 0">
+      <font face="Verdana" size="2">&nbsp;&nbsp;&nbsp;
+      private int y; // variable para la coordenada en y</font></p>
+      <p style="line-height: 100%; margin-top: 0; margin-bottom: 0">
+      <font face="Verdana" size="2">&nbsp;&nbsp;&nbsp;
+      public Punto() {&nbsp; // metodo para construir un objeto sin parámetros</font></p>
+      <p style="line-height: 100%; margin-top: 0; margin-bottom: 0">
+      <font face="Verdana" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      x = 0;</font></p>
+      <p style="line-height: 100%; margin-top: 0; margin-bottom: 0">
+      <font face="Verdana" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      y = 0;</font></p>
+      <p style="line-height: 100%; margin-top: 0; margin-bottom: 0">
+      <font face="Verdana" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      }</font></p>
+      <p style="line-height: 100%; margin-top: 0; margin-bottom: 0">
+      <font face="Verdana" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      public Punto(int x, int y) {&nbsp; // método para construir un objeto con
+      parámetros</font></p>
+      <p style="line-height: 100%; margin-top: 0; margin-bottom: 0">
+      <font face="Verdana" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      this.x = x;</font></p>
+      <p style="line-height: 100%; margin-top: 0; margin-bottom: 0">
+      <font face="Verdana" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      this.y = y;</font></p>
+      <p style="line-height: 100%; margin-top: 0; margin-bottom: 0">
+      <font face="Verdana" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      }</font></p>
+      <p style="line-height: 100%; margin-top: 0; margin-bottom: 0">
+      <font face="Verdana" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      public int getX() {&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // método
+      que te dá el valor de la coordenada x</font></p>
+      <p style="line-height: 100%; margin-top: 0; margin-bottom: 0">
+      <font face="Verdana" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      return x;</font></p>
+      <p style="line-height: 100%; margin-top: 0; margin-bottom: 0">
+      <font face="Verdana" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      }</font></p>
+      <p style="line-height: 100%; margin-top: 0; margin-bottom: 0">
+      <font face="Verdana" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      public int getY() {&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // método
+      que te dá el valor de la coordenada y</font></p>
+      <p style="line-height: 100%; margin-top: 0; margin-bottom: 0">
+      <font face="Verdana" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      return y;</font></p>
+      <p style="line-height: 100%; margin-top: 0; margin-bottom: 0">
+      <font face="Verdana" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      }</font></p>
+      <p style="line-height: 100%; margin-top: 0; margin-bottom: 0">
+      <font face="Verdana" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      public void setX(int x) {&nbsp; // método que sirve para cambiar el valor
+      de la coordenada x</font></p>
+      <p style="line-height: 100%; margin-top: 0; margin-bottom: 0">
+      <font face="Verdana" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      this.x = x;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // this se
+      utiliza porque se esta utilizando (x) como parámetro y como&nbsp;</font></p>
+      <p style="line-height: 100%; margin-top: 0; margin-bottom: 0">
+      <font face="Verdana" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      // variable de instancia y esto es para que no se confunda</font></p>
+      <p style="line-height: 100%; margin-top: 0; margin-bottom: 0">
+      <font face="Verdana" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      }</font></p>
+      <p style="line-height: 100%; margin-top: 0; margin-bottom: 0">
+      <font face="Verdana" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      public void setY(int y) {&nbsp; // método que te sirve para cambiar el
+      valor de la coordenada y</font></p>
+      <p style="line-height: 100%; margin-top: 0; margin-bottom: 0">
+      <font face="Verdana" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      this.y = y;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // this se utiliza
+      porque se esta utilizando (y)&nbsp; como parámetro y como&nbsp;</font></p>
+      <p style="line-height: 100%; margin-top: 0; margin-bottom: 0">
+      <font face="Verdana" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      // variable de instancia y esto es para que no se confunda</font></p>
+      <p style="line-height: 100%; margin-top: 0; margin-bottom: 0">
+      <font face="Verdana" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      }</font></p>
+      <p style="line-height: 100%; margin-top: 0; margin-bottom: 0">
+      <font face="Verdana" size="2">}</font></p>
+      <p><span lang="es-mx"><font size="2" face="Verdana">Esta clase queremos que contenga un
+      método que nos sirva para dibujar un punto en la coordenada (x,y),
+      entonces crearemos un nuevo método llamado paint(), el cual requerira un
+      elemento gráfico como el que hasta ahora hemos utilizado con un applet
+      paint(Graphics g).</font></span></p>
+      <p><span lang="es-mx"><font size="2" face="Verdana">Si el método paint() de la clase
+      Punto no recibe como parámetro el objeto gráfico de la clase Graphics,
+      no habrá manera que pueda dibujar el punto.</font></span></p>
+      <p><span lang="es-mx"><font size="2" face="Verdana">Veamos como quedaria ahora nuestra
+      clase Punto modificada:</font></span></p>
+      <p style="line-height: 100%; margin-top: 0; margin-bottom: 0">
+      <font face="Verdana" size="2">public
+      class Punto {</font></p>
+      <p style="line-height: 100%; margin-top: 0; margin-bottom: 0">
+      <font face="Verdana" size="2">&nbsp;&nbsp;&nbsp;
+      private int x;&nbsp; //&nbsp; variable para la coordenada en x</font></p>
+      <p style="line-height: 100%; margin-top: 0; margin-bottom: 0">
+      <font face="Verdana" size="2">&nbsp;&nbsp;&nbsp;
+      private int y; // variable para la coordenada en y</font></p>
+      <p style="line-height: 100%; margin-top: 0; margin-bottom: 0">
+      <font face="Verdana" size="2">&nbsp;&nbsp;&nbsp;
+      public Punto() {&nbsp; // metodo para construir un objeto sin parámetros</font></p>
+      <p style="line-height: 100%; margin-top: 0; margin-bottom: 0">
+      <font face="Verdana" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      x = 0;</font></p>
+      <p style="line-height: 100%; margin-top: 0; margin-bottom: 0">
+      <font face="Verdana" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      y = 0;</font></p>
+      <p style="line-height: 100%; margin-top: 0; margin-bottom: 0">
+      <font face="Verdana" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      }</font></p>
+      <p style="line-height: 100%; margin-top: 0; margin-bottom: 0">
+      <font face="Verdana" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      public Punto(int x, int y) {&nbsp; // método para construir un objeto con
+      parámetros</font></p>
+      <p style="line-height: 100%; margin-top: 0; margin-bottom: 0">
+      <font face="Verdana" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      this.x = x;</font></p>
+      <p style="line-height: 100%; margin-top: 0; margin-bottom: 0">
+      <font face="Verdana" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      this.y = y;</font></p>
+      <p style="line-height: 100%; margin-top: 0; margin-bottom: 0">
+      <font face="Verdana" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      }</font></p>
+      <p style="line-height: 100%; margin-top: 0; margin-bottom: 0">
+      <font face="Verdana" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      public int getX() {&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // método
+      que te dá el valor de la coordenada x</font></p>
+      <p style="line-height: 100%; margin-top: 0; margin-bottom: 0">
+      <font face="Verdana" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      return x;</font></p>
+      <p style="line-height: 100%; margin-top: 0; margin-bottom: 0">
+      <font face="Verdana" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      }</font></p>
+      <p style="line-height: 100%; margin-top: 0; margin-bottom: 0">
+      <font face="Verdana" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      public int getY() {&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // método
+      que te dá el valor de la coordenada y</font></p>
+      <p style="line-height: 100%; margin-top: 0; margin-bottom: 0">
+      <font face="Verdana" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      return y;</font></p>
+      <p style="line-height: 100%; margin-top: 0; margin-bottom: 0">
+      <font face="Verdana" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      }</font></p>
+      <p style="line-height: 100%; margin-top: 0; margin-bottom: 0">
+      <font face="Verdana" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      public void setX(int x) {&nbsp; // método que sirve para cambiar el valor
+      de la coordenada x</font></p>
+      <p style="line-height: 100%; margin-top: 0; margin-bottom: 0">
+      <font face="Verdana" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      this.x = x;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // this se
+      utiliza porque se esta utilizando (x) como parámetro y como&nbsp;</font></p>
+      <p style="line-height: 100%; margin-top: 0; margin-bottom: 0">
+      <font face="Verdana" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      // variable de instancia y esto es para que no se confunda</font></p>
+      <p style="line-height: 100%; margin-top: 0; margin-bottom: 0">
+      <font face="Verdana" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      }</font></p>
+      <p style="line-height: 100%; margin-top: 0; margin-bottom: 0">
+      <font face="Verdana" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      public void setY(int y) {&nbsp; // método que te sirve para cambiar el
+      valor de la coordenada y</font></p>
+      <p style="line-height: 100%; margin-top: 0; margin-bottom: 0">
+      <font face="Verdana" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      this.y = y;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // this se utiliza
+      porque se esta utilizando (y)&nbsp; como parámetro y como&nbsp;</font></p>
+      <p style="line-height: 100%; margin-top: 0; margin-bottom: 0">
+      <font face="Verdana" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      // variable de instancia y esto es para que no se confunda</font></p>
+      <p style="line-height: 100%; margin-top: 0; margin-bottom: 0">
+      <font face="Verdana" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      }</font></p>
+      <blockquote>
+        <p style="line-height: 100%; margin-top: 0; margin-bottom: 0">
+        <font face="Verdana" size="2">&nbsp;
+        public void paint(Graphics g) {</font></p>
+        <p style="line-height: 100%; margin-top: 0; margin-bottom: 0">
+        <font face="Verdana" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        g.fillOval(x,y, 5, 5);</font></p>
+        <p style="line-height: 100%; margin-top: 0; margin-bottom: 0">
+        <font face="Verdana" size="2">&nbsp;
+        }</font></p>
+      </blockquote>
+      <p style="line-height: 100%; margin-top: 0; margin-bottom: 0">
+      <font face="Verdana" size="2">}</font></p>
+      <p><span lang="es-mx"><font size="2" face="Verdana">Esta clase se utiliza creando un
+      objeto de ella dentro de un applet y haciendo uso de sus métodos:</font></span></p>
+      <blockquote>
+        <p style="line-height: 100%; margin-top: 0; margin-bottom: 0"><font size="2">
+        <font face="Verdana" COLOR="#0000dd">import</font><font face="Verdana">
+        java.awt.*;</font></font></p>
+        <p style="line-height: 100%; margin-top: 0; margin-bottom: 0"><font size="2">
+        <font face="Verdana" COLOR="#0000dd">import</font><font face="Verdana">
+        java.applet.*;</font></font></p>
+        <p style="line-height: 100%; margin-top: 0; margin-bottom: 0"><font size="2">
+        <font face="Verdana" COLOR="#0000dd">import</font><font face="Verdana">
+        java.awt.event.*;</font></font></p>
+        <p style="line-height: 100%; margin-top: 0; margin-bottom: 0">
+        <font face="Verdana" size="2" COLOR="#dd0000">//
+        &lt;applet width=&quot;200&quot; height=&quot;200&quot;
+        code=&quot;AppletMetodos1&quot;&gt;&lt;/applet&gt;</font></p>
+        <p style="line-height: 100%; margin-top: 0; margin-bottom: 0"><font size="2">
+        <font face="Verdana" COLOR="#0000dd">public</font><font face="Verdana">
+        <font COLOR="#0000dd">class</font> AppletMetodos1 <font COLOR="#0000dd">extends</font>
+        Applet <font COLOR="#0000dd">implements</font> ActionListener {</font></font></p>
+        <p style="line-height: 100%; margin-top: 0; margin-bottom: 0">
+        <font face="Verdana" size="2">&nbsp;&nbsp;
+        Label l1, l2, l3,l4;</font></p>
+        <p style="line-height: 100%; margin-top: 0; margin-bottom: 0">
+        <font face="Verdana" size="2">&nbsp;&nbsp;
+        TextField t1, t2, t3,t4;</font></p>
+        <p style="line-height: 100%; margin-top: 0; margin-bottom: 0">
+        <font face="Verdana" size="2">&nbsp;&nbsp;
+        Button b;</font></p>
+        <p style="line-height: 100%; margin-top: 0; margin-bottom: 0">
+        <font face="Verdana" size="2">&nbsp;&nbsp;
+        Punto p;</font></p>
+        <font SIZE="4">
+        <p style="line-height: 100%; margin-top: 0; margin-bottom: 0">&nbsp;</p>
+        </font>
+        <p style="line-height: 100%; margin-top: 0; margin-bottom: 0"><font size="2">
+        <font COLOR="#0000dd" face="Verdana">&nbsp;&nbsp;
+        public</font><font face="Verdana"> AppletMetodos1() {</font></font></p>
+        <p style="line-height: 100%; margin-top: 0; margin-bottom: 0">
+        <font face="Verdana" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        l1 = <font COLOR="#0000dd">new</font> Label(<font COLOR="#006600">&quot;X&quot;</font>);</font></p>
+        <p style="line-height: 100%; margin-top: 0; margin-bottom: 0">
+        <font face="Verdana" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </font><font size="2"><font face="Verdana">t1 = </font>
+        <font COLOR="#0000dd" face="Verdana">new</font><font face="Verdana">
+        TextField(4);</font></font></p>
+        <p style="line-height: 100%; margin-top: 0; margin-bottom: 0">
+        <font face="Verdana" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        l2 = <font COLOR="#0000dd">new</font> Label(<font COLOR="#006600">&quot;Y&quot;</font>);</font></p>
+        <p style="line-height: 100%; margin-top: 0; margin-bottom: 0">
+        <font face="Verdana" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </font><font size="2"><font face="Verdana">t2 = </font>
+        <font COLOR="#0000dd" face="Verdana">new</font><font face="Verdana">
+        TextField(4);</font></font></p>
+        <p style="line-height: 100%; margin-top: 0; margin-bottom: 0">
+        <font face="Verdana" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        b = <font COLOR="#0000dd">new</font> Button(<font COLOR="#006600">&quot;DIBUJA
+        PUNTO&quot;</font>);</font></p>
+        <p style="line-height: 100%; margin-top: 0; margin-bottom: 0">
+        <font face="Verdana" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        add(l1);</font></p>
+        <p style="line-height: 100%; margin-top: 0; margin-bottom: 0">
+        <font face="Verdana" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        add(t1);</font></p>
+        <p style="line-height: 100%; margin-top: 0; margin-bottom: 0">
+        <font face="Verdana" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        add(l2);</font></p>
+        <p style="line-height: 100%; margin-top: 0; margin-bottom: 0">
+        <font face="Verdana" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        add(t2);</font></p>
+        <p style="line-height: 100%; margin-top: 0; margin-bottom: 0">
+        <font face="Verdana" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        add(b);</font></p>
+        <p style="line-height: 100%; margin-top: 0; margin-bottom: 0">
+        <font face="Verdana" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </font><font size="2"><font face="Verdana">b. addActionListener(</font><font COLOR="#0000dd" face="Verdana">this</font><font face="Verdana">);</font></font></p>
+        <p style="line-height: 100%; margin-top: 0; margin-bottom: 0">
+        <font face="Verdana" size="2">&nbsp;&nbsp;
+        }</font></p>
+        <font SIZE="4">
+        <p style="line-height: 100%; margin-top: 0; margin-bottom: 0">&nbsp;</p>
+        </font>
+        <p style="line-height: 100%; margin-top: 0; margin-bottom: 0">
+        <font face="Verdana" size="2"><font COLOR="#0000dd">&nbsp;&nbsp;
+        public</font> <font COLOR="#0000dd">void</font> paint(Graphics g) {</font></p>
+        <p style="line-height: 100%; margin-top: 0; margin-bottom: 0">
+        <font face="Verdana" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        p.paint(g);</font></p>
+        <p style="line-height: 100%; margin-top: 0; margin-bottom: 0">
+        <font face="Verdana" size="2">&nbsp;&nbsp;
+        }</font></p>
+        <font SIZE="4">
+        <p style="line-height: 100%; margin-top: 0; margin-bottom: 0">&nbsp;</p>
+        </font>
+        <p style="line-height: 100%; margin-top: 0; margin-bottom: 0">
+        <font face="Verdana" size="2"><font COLOR="#0000dd">&nbsp;&nbsp;
+        public</font> <font COLOR="#0000dd">void</font>
+        actionPerformed(ActionEvent ae) {</font></p>
+        <p style="line-height: 100%; margin-top: 0; margin-bottom: 0">
+        <font face="Verdana" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </font><font size="2"><font COLOR="#0000dd" face="Verdana">int</font><font face="Verdana">
+        x = Integer.parseInt(t1.getText());</font></font></p>
+        <p style="line-height: 100%; margin-top: 0; margin-bottom: 0">
+        <font face="Verdana" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </font><font size="2"><font COLOR="#0000dd" face="Verdana">int</font><font face="Verdana">
+        y = Integer.parseInt(t1.getText());</font></font></p>
+        <p style="line-height: 100%; margin-top: 0; margin-bottom: 0">
+        <font face="Verdana" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </font><font size="2"><font face="Verdana">p = </font>
+        <font COLOR="#0000dd" face="Verdana">new</font><font face="Verdana">
+        Punto(x, y);</font></font></p>
+        <p style="line-height: 100%; margin-top: 0; margin-bottom: 0">
+        <font face="Verdana" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        repaint();</font></p>
+        <p style="line-height: 100%; margin-top: 0; margin-bottom: 0">
+        <font face="Verdana" size="2">&nbsp;&nbsp;
+        }</font></p>
+        <p style="line-height: 100%; margin-top: 0; margin-bottom: 0">
+        <font face="Verdana" size="2">}</font></p>
+      </blockquote>
+      <p><span lang="es-mx"><font size="2" face="Verdana">El applet ejecutado quedaría:</font></span></p>
+      <p align="center"><font face="Verdana" size="2"><img border="0" src="M3-1Ja17.gif" width="208" height="269"></font></p>
+      <p><span lang="es-mx"><font size="2" face="Verdana">En el se puede observar un punto
+      grande en la coordenada 100, 100, ahora hicimos este punto grande con el
+      método fillOval y mandandole un diametro de mas de un pixel para que se
+      viera la diferencia.</font></span></p>
+      <p><span lang="es-mx"><font size="2" face="Verdana">Al utilizar un método, o al llamar
+      (invocar) un método, nosotros le podemos pasar valores al método y a su
+      vez, el método puede utilizar aquellos valores que han sido definidos en
+      forma global, por ejemplo, nosotros en la clase Punto, dentro del método
+      paint(), podemos utilizar x, o y, ya que ambas son variables de instancia
+      definidas arriba de todos los métodos, por lo tanto todos los métodos
+      pueden utilizar el valor de x o el valor de y.&nbsp;</font></span></p>
+      <p><span lang="es-mx"><font size="2" face="Verdana">Por otro lado la clase Punto no es un
+      applet y no tiene la capacidad de dibujar en un elemento gráfico por si
+      solo, por eso desde el método paint() del applet, le pasamos al método
+      paint de la clase Punto, el parámetro gráfico g, y de esa manera dentro
+      del método paint() de la clase Punto es como este método puede dibujar.</font></span></p>
+      <p><span lang="es-mx"><font size="2" face="Verdana">Es importante tambien que notes que
+      en la clase Punto al introducir el método paint(), se hizo el&nbsp;
+      import java.awt.*;&nbsp;&nbsp;&nbsp; ya que ahora que se dibuja, se
+      requiere utilizar el método fillRect() el cual pertenece a los elementos
+      de la clase Graphics que está dentro de ese paquete.</font></span></p>
+      <p><span lang="es-mx"><font size="2" face="Verdana">Un método es definido como void
+      cuando no requiere regresar un valor a quien lo llamó. En caso de
+      requerir regresar un valor este puede ser de los mismos tipos que las
+      variables definidas al principio:</font></span></p>
+      <table border="1" width="717">
+        <tr>
+                    <th width="125"><font face="Verdana" size="2">tipo</font></th>
+                    <th width="273"><font face="Verdana" size="2">descripción</font></th>
+                    <th width="297"><font face="Verdana" size="2">formato/tamaño</font></th>
+        </tr>
+        <tr>
+                    <td align="middle" colSpan="3" width="707">
+                    <font face="Verdana" size="2"><em>(integers)</em></font></td>
+        </tr>
+        <tr>
+                    <td width="125"><code><font face="Verdana" size="2">byte</font></code></td>
+                    <td width="273"><font face="Verdana" size="2">entero de tamaño byte</font></td>
+                    <td width="297"><font face="Verdana" size="2">8-bits a complementos a dos</font></td>
+        </tr>
+        <tr>
+                    <td width="125"><code><font face="Verdana" size="2">short</font></code></td>
+                    <td width="273"><font face="Verdana" size="2">entero corto</font></td>
+                    <td width="297"><font face="Verdana" size="2">16-bits a complementos a dos</font></td>
+        </tr>
+        <tr>
+                    <td width="125"><code><font face="Verdana" size="2">int</font></code></td>
+                    <td width="273"><font face="Verdana" size="2">entero</font></td>
+                    <td width="297"><font face="Verdana" size="2">32-bits a complementos a dos</font></td>
+        </tr>
+        <tr>
+                    <td width="125"><code><font face="Verdana" size="2">long</font></code></td>
+                    <td width="273"><font face="Verdana" size="2">entero grande</font></td>
+                    <td width="297"><font face="Verdana" size="2">64-bits a complementos a dos</font></td>
+        </tr>
+        <tr>
+                    <td align="middle" colSpan="3" width="707">
+                    <font face="Verdana" size="2"><em>(números reales)</em></font></td>
+        </tr>
+        <tr>
+                    <td width="125"><code><font face="Verdana" size="2">float</font></code></td>
+                    <td width="273"><font face="Verdana" size="2">punto flotante de precision sencilla</font></td>
+                    <td width="297"><font face="Verdana" size="2">32-bits IEEE 754</font></td>
+        </tr>
+        <tr>
+                    <td width="125"><code><font face="Verdana" size="2">double</font></code></td>
+                    <td width="273"><font face="Verdana" size="2">punto flotante de doble precision</font></td>
+                    <td width="297"><font face="Verdana" size="2">64-bits IEEE 754</font></td>
+        </tr>
+        <tr>
+                    <td align="middle" colSpan="3" width="707">
+                    <font face="Verdana" size="2"><em>(otros tipos)</em></font></td>
+        </tr>
+        <tr>
+                    <td width="125"><code><font face="Verdana" size="2">char</font></code></td>
+                    <td width="273"><font face="Verdana" size="2">un solo caracter</font></td>
+                    <td width="297"><font face="Verdana" size="2">caracter de 16-bits de tipo Unicode</font></td>
+        </tr>
+        <tr>
+                    <td width="125"><code><font face="Verdana" size="2">boolean</font></code></td>
+                    <td width="273"><font size="2" face="Verdana">valor boleano (</font><font size="2"><code><font face="Verdana">true</font></code><font face="Verdana"> o
+                    </font> <code><font face="Verdana">false</font></code></font><font size="2" face="Verdana">)</font></td>
+                    <td width="297"><font face="Verdana" size="2">true o false</font></td>
+        </tr>
+        <tr>
+                    <td width="125"><font face="Verdana" size="2">NombreClase</font></td>
+                    <td width="273"><font face="Verdana" size="2">Alguna clase existente</font></td>
+                    <td width="297"><font face="Verdana" size="2">representará un objeto de alguna clase conocida</font></td>
+        </tr>
+      </table>
+      <p><span lang="es-mx"><font size="2" face="Verdana">Las variables y objetos definidos y
+      creados dentro de un método se consideran locales al método y solo
+      pueden ser utilizados dentro de él. Si al llamar a otro método se quiere
+      que el método llamado utilice alguna variable o algún objeto, dicho
+      método debe de tomarlo a través de un parámetro para tal efecto.</font></span></p>
+      <p><span lang="es-mx"><font size="2" face="Verdana">Es muy importante que los métodos se
+      llamen con el número exacto de variables y/o objetos definidos como
+      parámetros, asi como el tipo correspondiente de cada uno de ellos.</font></span></p>
+      <p>&nbsp;</p>
+    </td>
+  </tr>
+  <tr>
+    <td width="74%" bgcolor="#000000" height="18"><font face="Verdana"><b>
+    <font color="#FFFFFF">Ejercicio</font></b></font></td>
+  </tr>
+  <tr>
+    <td width="74%" bgcolor="#FFFFFF" height="32">
+      <p><font face="Verdana" size="2"><br>
+&nbsp;1. Todas las clases tienen dos métodos que son muy utilizados, el método
+      equals y el método toString. Se te pide completes la clase Punto para que
+      contenga el método equals que recibe un objeto de la clase Punto y
+      compara si los valores de (x,y) en el objeto recibido son los mismos que
+      el objeto en el que se esta.</font></p>
+      <p><font face="Verdana" size="2">2. Todas las clases tienen dos métodos
+      que son muy utilizados, el método equals y el método toString. Se te
+      pide completes la clase Punto para que contenga el método toString, el
+      cual debe regresar un String que concatene los valores de las coordenadas
+      x,y. La forma de regresar esto debe ser utilizando () paréntesis, por
+      ejemplo el punto 3 en x, 2 en y debe regresarse como (3,2) en formato
+      String.</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="74%" bgcolor="#000000" height="18">
+    <font face="Verdana" color="#FFFFFF"><b>Ligas sugeridas</b></font></td>
+  </tr>
+  <tr>
+    <td width="74%" bgcolor="#FFFFFF" height="19">
+    <font face="Verdana" size="2">
+    <a href="http://java.sun.com/docs/books/tutorial/native1.1/implementing/method.html">http://java.sun.com/docs/books/tutorial/native1.1/implementing/method.html</a>
+    </font>
+  </td>
+  </tr>
+</table>
+<p align="left"><font face="Verdana" size="2"><i><b><a href="CURSO-JAVA.htm">Regresar
+</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="M3-2Java.htm">Siguiente</a></b></i></font></p>
+
+</body>
+
+</html>

@@ -1,0 +1,200 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>Módulo 1</title>
+</head>
+
+<body>
+
+<table border="3" cellspacing="5" width="100%" id="AutoNumber1" cellpadding="5" height="280">
+  <tr>
+    <td width="74%" bgcolor="#000000" height="86">
+      <p align="left"><font face="Verdana" color="#FFFFFF"><b>Módulo 6:
+      Arreglos <img border="0" src="puronombreJava1.JPG" align="right" width="346" height="68"></b></font>
+      <p align="center">&nbsp;&nbsp;&nbsp; <font face="Verdana" color="#FFFFFF"><b>3.
+      Arreglos de Objetos</b></font></td>
+  </tr>
+  <tr>
+    <td width="74%" height="12"><span lang="ES-MX">
+      <font face="Verdana" size="2">
+      <p><b>
+      <u><font size="2">¿Que es un arreglo de objetos?</font></u></b></p>
+      <p><font size="2">Normalmente siempre manejamos un arreglo de números
+      enteros o un arreglo de numeros de doble precisión, pero en Java los
+      arreglos tambien se extienden al manejo de objetos.&nbsp;</font></p>
+      <p>Un arreglo de objetos nos permite tener varios objetos de la misma
+      clase agrupados en una manera en la que podemos hacer referencia a ellos
+      por medio de un subíndice (una dimensión) o dos subíndices (dos
+      dimensiones).</p>
+      <p><b><font size="2"><br>
+      <u>Declaración de arreglos de objetos</u></font></b></p>
+      <p><font size="2">Para declarar un arreglo de objetos se utiliza el siguiente formato:
+      </font> </p>
+      <blockquote>
+        <p>Clase&nbsp; <font size="2">nombre_arreglo [] = new Clase [tamaño];&nbsp;
+        // para una dimension</font></p>
+        <p>Clase nombre_arreglo [] [] = new Clase [renglones] [columnas]; //
+        para dos dimensiones</p>
+      </blockquote>
+      <p><font size="2">donde Clase es la clase a la que pertenecen los objetos
+      que queremos definir en el arreglo de una dimensión o en el de dos
+      dimensiones.</font></p>
+      <p>&nbsp; </p>
+      <p><u><b><font size="2">Uso de los elementos del arreglo de objetos </font> </b> </u> </p>
+      <p><font size="2">Para usar los elementos individuales de un arreglo de
+      objetos se usa el siguiente formato:
+      </font> </p>
+      <blockquote>
+        <p><font size="2">arreglo[subíndice].metodo(); // para una dimensión</font></p>
+        <p>arreglo[subindice1][subindice2].metodo(); // para dos dimensiones</p>
+      </blockquote>
+      <p><font size="2">Supongamos que tenemos un arreglo de objetos de la clase
+      Punto de una dimension, las siguientes pudieran ser instrucciones
+      válidas:</font></p>
+      <blockquote>
+        <p><font size="2">Punto arr[] = new Punto [5];&nbsp;&nbsp; // declarar
+        un arreglo de 5 puntos<br>
+        arr[3].setX(8);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        // se define un 8 en X en el cuarto punto (ya que empieza en el cero) <br>
+        arr[2].setY(-3);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        // se cambia el valor de Y en -3 para el tercer punto <br>
+        t2.setText(&quot;&quot; + arr[3].getX());&nbsp;&nbsp; // al texto 2 se
+        le pone el valor de la x del cuarto punto (un 8) <br>
+ </font> </p>
+      </blockquote>
+      <p><font size="2"><b><u>Ejemplo:</u> </b>Tomando la última definición de
+      la clase Punto y escribiendo una aplicación que cree algunos puntos en un
+      arreglo de dos dimensiones tenemos lo siguiente:</font></p>
+      <p><b>Clase Punto</b></p>
+      </font>
+      <pre>public class Punto {    
+    private int x;  //  variable para la coordenada en x    
+    private int y; // variable para la coordenada en y  
+    
+    public Punto() {  // metodo para construir un objeto sin parámetros          
+       x = 0;          
+       y = 0;    
+    }
+    
+    public Punto(int x, int y) {  // método para construir un objeto con parámetros enteros          
+       this.x = x;          
+       this.y = y;    
+    }
+    
+    public Punto(double x, double y) {  // método para construir un objeto con parámetros double
+       this.x = (int) x;
+       this.y = (int) y;
+    }
+
+    public Punto(Punto obj) {  // método para construir un objeto con parámetro objeto Punto
+       this.x = obj.x;
+       this.y = obj.y;
+    }
+  
+    public int getX() {         // método que te dá el valor de la coordenada x          
+       return x;    
+    }    
+    
+    public int getY() {         // método que te dá el valor de la coordenada y          
+       return y;    
+    }   
+    
+    public void setX(int x) {  // método que sirve para cambiar el valor de la coordenada x          
+       this.x = x;         // this se utiliza porque se esta utilizando (x) como parámetro y como&nbsp;        
+                              // variable de instancia y esto es para que no se confunda    
+    }
+    
+    public void setX(double x) {  // método que sirve para cambiar el valor de la coordenada x
+       this.x = (int) x;       // con un valor double  &nbsp;    
+    }
+   
+    public void setY(int y) {  // método que te sirve para cambiar el valor de la coordenada y
+          this.y = y;        // this se utiliza porque se esta utilizando (y)  como parámetro y como&nbsp;  
+                               // variable de instancia y esto es para que no se confunda                                    
+    }
+   
+    public void setY(double y) {  // método que te sirve para cambiar el valor de la coordenada y          
+         this.y = (int) y;        // con un valor double&nbsp;    
+    }
+    
+    public String toString() {
+        return &quot;(&quot; + getX() + &quot;,&quot; + getY() + &quot;)&quot;;
+    }
+}</pre>
+      <p><b><font face="Verdana" size="2">Aplicación</font></b></p>
+      <pre>import java.io.*;
+
+public class AplicacionArreglo5 {
+    
+    public static void main(String[] args) {
+        Punto arreglo[][] = new Punto [3][3];
+        
+        for (int i=0; i&lt;3; i++) {
+           for (int j=0; j&lt; 3; j++) {
+               arreglo [i][j] = new Punto(i,j);
+           }
+        }
+        
+        for (int i=0; i&lt;3; i++) {
+           for (int j=0; j&lt;3; j++) {
+              System.out.print(&quot;Elemento [&quot; + i + &quot;,&quot; + j + &quot;] = &quot; + arreglo[i][j].toString() + &quot; &quot;);
+           }
+           System.out.println();
+        }
+    }
+ }</pre>
+      <pre><font size="2">Esta aplicación provocará la siguiente ejecución:</font></pre>
+      <div align="center">
+        <center>
+        <pre><img border="0" src="M6-3Ja4.gif" width="652" height="167"></pre>
+        </center>
+      </div>
+      <font face="Verdana" size="2"><p>Observamos como el método toString() nos
+      ayuda a visualizar los puntos al desplegarlos en la aplicación.</p>
+      </font>
+      </span>
+    </td>
+  </tr>
+  <tr>
+    <td width="74%" bgcolor="#000000" height="18"><font face="Verdana" color="#FFFFFF"><b>Ejercicio</b></font></td>
+  </tr>
+  <tr>
+    <td width="74%" bgcolor="#FFFFFF" height="19">
+      <p align="justify"><font face="Verdana" size="2">1. Crea una aplicación gráfica parecida a la de la sección 6-1, en
+      la cual se añaden números enteros, pero aqui deberás de tener un
+      arreglo de una dimensión de objetos de la clase Punto (máximo 100
+      puntos). Tendrás tres campos texto, uno para poner el elemento del
+      arreglo, y los otros dos para poner el valor de X, o el valor de Y a
+      añadir al arreglo de objetos de la clase Punto. Botón AÑADE deberá
+      añadir el punto al arreglo de objetos, el botón MUESTRA VECTOR,
+      mostrará en el área de texto todos los objetos de la clase Punto,
+      utilizando el arreglo y utilizando el método toString(). El botón LIMPIA
+      VECTOR creará de nuevo el arreglo y el contador de elementos del arreglo
+      lo inicializará a cero. El botón LIMPIA CAMPOS deberá limpiar los
+      campos de texto y el de área.</font></p>
+      <p align="justify"><font face="Verdana" size="2">2. Crea un nuevo botón llamado mayor que al oprimirlo el usuario
+      aparezca en el área de texto el punto con la coordenada mayor (valor más
+      grande en x y el valor más grande en y) y la posición en la que
+      se encontró dentro del arreglo (tomar la posición cero como la primera y
+      así sucesivamente).</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="74%" bgcolor="#000000" height="18"><font face="Verdana" color="#FFFFFF"><b>Ligas
+      sugeridas</b></font></td>
+  </tr>
+  <tr>
+    <td width="74%" bgcolor="#FFFFFF" height="19">
+      <p><font face="Verdana" size="2"><a href="http://java.sun.com/docs/books/tutorial/java/data/arraysOfObjects.html">http://java.sun.com/docs/books/tutorial/java/data/arraysOfObjects.html</a></font></td>
+  </tr>
+</table>
+<p align="left"><font face="Verdana" size="2"><i><b><a href="CURSO-JAVA.htm">Regresar
+</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="M7-1Java.htm">Siguiente</a></b></i></font></p>
+
+</body>
+
+</html>

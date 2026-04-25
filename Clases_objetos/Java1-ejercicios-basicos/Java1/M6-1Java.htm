@@ -1,0 +1,258 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>Módulo 1</title>
+</head>
+
+<body>
+
+<table border="3" cellspacing="5" width="100%" id="AutoNumber1" cellpadding="5" height="280">
+  <tr>
+    <td width="74%" bgcolor="#000000" height="86">
+      <p align="left"><font face="Verdana" color="#FFFFFF"><b>Módulo 6:
+      Arreglos <img border="0" src="puronombreJava1.JPG" align="right" width="346" height="68"></b></font>
+      <p align="center">&nbsp;&nbsp;&nbsp; <font face="Verdana" color="#FFFFFF"><b>1.
+      Arreglos de una Dimensión</b></font></td>
+  </tr>
+  <tr>
+    <td width="74%" height="12"><span lang="ES-MX">
+      <font face="Verdana" size="2">
+      <p><b>
+      <u><font size="2">¿Que es un arreglo?</font></u></b></p>
+      <p><font size="2">Un arreglo es un tipo de dato estructurado que permite guardar colecciones de elementos 
+      del mismo tipo.</font></p>
+      <p><b><font size="2"><br>
+      <u>Declaración de arreglos </u></font> </b></p>
+      <p><font size="2">Para declarar un arreglo se utiliza el siguiente formato:
+      </font> </p>
+      <blockquote>
+        <p><font size="2">tipo nombre_arreglo [] = new tipo[tamaño];</font></p>
+      </blockquote>
+      <p><font size="2">donde tipo es el tipo de los datos que almacenará el arreglo. Es 
+      importante mencionar que se pueden declarar arreglos de los tipos <br>
+      <br>
+      primitivos de C++, o bien de tipos definidos por el usuario.</font></p>
+      <p><font size="2">Tamaño representa la cantidad de casillas que se reservan para el 
+      arreglo. En Java todos los arreglos empiezan en el subíndice 0 <br>
+      <br>
+      y llegan al 
+      subíndice tamaño-1.</font></p>
+      <p><font size="2">Por ejemplo: </font> </p>
+      <blockquote>
+        <font size="2">int arr[] = new int[6];&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // arreglo de 6 elementos enteros, los 
+      subíndices van del 0 al 5</font><p><font size="2">char cad[] = new
+        char[10];&nbsp;&nbsp; // arreglo de 10 elementos de tipo 
+      caracter, los subíndices van del 0 al 9.</font></p>
+      </blockquote>
+      <p><u><b><font size="2">Uso de los elementos del arreglo </font> </b> </u> </p>
+      <p><font size="2">Para usar los elementos individuales de un arreglo se usa el siguiente formato:
+      </font> </p>
+      <blockquote>
+        <p><font size="2">arreglo[subíndice]</font></p>
+      </blockquote>
+      <p><font size="2">Como un elemento de un arreglo es un dato, se puede usar como cualquier 
+      variable de ese tipo; Enseguida se pueden ver algunos ejemplos:</font></p>
+      <blockquote>
+        <p><font size="2">int arr[] = new int [4];<br>
+        arr[3] = 8; <br>
+        arr[2]= Integer.parseInt(t1.getText()); <br>
+        t2.setText(&quot;&quot; + arr[3]); <br>
+        arr[0] = arr[1] + arr[2]; <br>
+        int k = 2; <br>
+        arr[k+1] = 20; </font> </p>
+      </blockquote>
+      <p><b><u><font size="2">Ejemplo:</font></u></b></p>
+      </font>
+      <blockquote>
+        
+      <pre><font size="2" face="Courier">import java.io.*;
+
+public class AplicacionArreglo {
+    
+    public static void main(String[] args) {
+        int arreglo[] = new int [10];
+        
+        for (int i=0; i&lt;10; i++) {
+           arreglo [i] = i;
+        }
+        
+        for (int i=0; i&lt;10; i++) {
+           System.out.println(&quot;Elemento [&quot; + i + &quot;] = &quot; + arreglo[i]);
+        }
+    }
+ }</font></pre>
+      </blockquote>
+      <pre><font size="2">Esta aplicación provocará la siguiente ejecución:</font></pre>
+      <div align="center">
+        <center>
+        <pre><img border="0" src="MX-XJa1.gif" width="660" height="239"></pre>
+        </center>
+      </div>
+      <font face="Verdana" size="2">
+            <p><u><b><font size="2">Inicializar arreglos en la declaración
+            </font> </b></u></p>
+      <p><font size="2">En Java es posible inicializar un arreglo al declararlo; esto se hace
+      sin definir el número de elementos y colocando un operador de asignación y después entre llaves la
+      lista de valores para el arreglo 
+      separados por comas, veamos los siguientes ejemplos:</font></p>
+      <blockquote>
+      <font size="2">double arreglo[] = { 23.5, 54.22, 78}; </font>
+      <p><font size="2">char cadena[] = {‘a’, ‘b’, ‘c’, ‘d’}; </font>
+      </p>
+      </blockquote>
+      <p>En Java es posible saber el número de elementos del arreglo utilizando
+      el nombre del arreglo un punto y la palabra length, como se muestra en el
+      siguiente ejemplo:
+      </p>
+      </font>
+      <pre><font face="Courier" size="2">import java.io.*;
+
+public class AplicacionArreglo1 {
+    
+    public static void main(String[] args) {
+        int arreglo[] = {1,2,3};
+                
+        for (int i=0; i&lt;arreglo.length; i++) {
+           System.out.println(&quot;Elemento [&quot; + i + &quot;] = &quot; + arreglo[i]);
+        }
+    }
+}</font></pre>
+      <font face="Verdana" size="2">El cual al ejecutar mostrará lo siguiente:
+      <p align="center"><img border="0" src="MX-XJa2.gif" width="660" height="155"></p>
+      <p>Es muy sencillo tomar datos y agregarlos a un arreglo, como lo puede
+      mostrar la siguiente aplicación:</p>
+      <pre>import java.awt.*;
+import java.applet.*;
+import java.awt.event.*;
+
+// &lt;applet width=&quot;400&quot; height=&quot;200&quot; code=&quot;AppletArreglos1&quot;&gt;&lt;/applet&gt;
+
+public class AppletArreglos1 extends Applet implements ActionListener{
+    	Label l1, l2;
+	    Button b1, b2,b3,b4;	
+	    TextField t1;
+	    TextArea ta1;
+	    int arreglo[];
+	    int conta;
+
+        public AppletArreglos1() {
+			l1 = new Label(&quot;Dato a Añadir&quot;);
+			l2 = new Label(&quot;Texto para ver Arreglo&quot;);
+			t1 = new TextField();
+			ta1 = new TextArea(10,12);
+			b1 = new Button(&quot;Añade&quot;);
+			b2 = new Button(&quot;Muestra Vector&quot;);
+			b3 = new Button(&quot;Limpia Vector&quot;);
+			b4 = new Button(&quot;Limpia Campos&quot;);
+			add(l1);
+			add(t1);
+			add(l2);
+			add(ta1);
+			add(b1);
+			add(b2);
+			add(b3);
+			add(b4);
+			b1.addActionListener(this);
+			b2.addActionListener(this);
+			b3.addActionListener(this);
+			b4.addActionListener(this);
+			arreglo = new int[100];
+			conta=0;
+ 	    }
+	     
+	    public void actionPerformed(ActionEvent ae) {
+	        if (ae.getSource() == b1) {
+	            if (conta &gt; arreglo.length) {
+	                ta1.setText(&quot;No se puede añadir otro elemento&quot;);
+	            }
+	            else {
+	                arreglo[conta++] = Integer.parseInt(t1.getText());
+	                t1.setText(&quot;&quot;);   
+	            }
+	         }
+	         if (ae.getSource() == b2) {
+	               ta1.setText(&quot;&quot;);
+	               for (int i=0; i &lt; conta; i++) {
+	                   ta1.append(&quot;&quot; + arreglo[i] + &quot;\n&quot;);
+	               }
+	         }
+	         if (ae.getSource() == b3) {
+	               conta = 0;
+	               arreglo = new int[100];
+	         }
+	         if (ae.getSource() == b4) {
+					t1.setText(&quot;&quot;);
+					ta1.setText(&quot;&quot;);
+	         }
+	    }
+}</pre>
+      <p>La cual se visualiza asi:</p>
+      <p><img border="0" src="MX-XJa3.gif" width="408" height="269">&nbsp;&nbsp;
+      <img border="0" src="MX-XJa4.gif" width="408" height="269"></p>
+      <p>De la aplicación anterior podemos observar que aunque sabemos que
+      length es el número de elementos en el arreglo, solo estamos utilizando
+      conta en el ciclo para desplegar, ya que esta variable nos dice cuantos
+      elementos se han introducido al arreglo.</p>
+      <p><b><u>Usando mal los Índices</u></b></p>
+      <p>Cuando un subíndice esta mal empleado, haciendo referencia a un
+      elemento en el arreglo que no existe, Java arroja un error de ejecución
+      llamado de excepción, el cual es ArrayIndexOutOfBoundsException, debemos
+      tener cuidado en esto, pues la aplicación se cancela y no continua, como
+      se muestra en la siguiente aplicación:</p>
+      <pre>import java.io.*;
+
+public class AplicacionArreglo4 {
+    
+    public static void main(String[] args) {
+        int arreglo[] = {1,2,3};
+                
+        for (int i=0; i&lt;arreglo.length+1; i++) {
+           System.out.println(&quot;Elemento [&quot; + i + &quot;] = &quot; + arreglo[i]);
+        }
+    }
+}</pre>
+      <p>La ejecución que muestra la aplicación es:</p>
+      <p align="center"><img border="0" src="M6-1Ja1.gif" width="652" height="167"></p>
+      <p>Podemos observar como la aplicación alcanza a mostrar el último valor
+      posible, pero cuando hace referencia al elemento 3 (ya que en la
+      aplicación la condición es i &lt; arreglo.length + 1, se sale del rango
+      y arroja la excepcion.</p>
+      </font>
+      </span>
+    </td>
+  </tr>
+  <tr>
+    <td width="74%" bgcolor="#000000" height="18"><font face="Verdana" color="#FFFFFF"><b>Ejercicio</b></font></td>
+  </tr>
+  <tr>
+    <td width="74%" bgcolor="#FFFFFF" height="19">
+      <p><font face="Verdana" size="2">1. Modifica la aplicación con interfaz gráfica anterior para que ahora al añadir el
+      elemento en el vector valide que no se encuentre y si esta que coloque un
+      mensaje en el área de texto, como lo muestra la figura:&nbsp;&nbsp;</font></p>
+      <p align="center"><img border="0" src="M6-1Ja10.gif" width="408" height="269"></p>
+      <p align="justify"><font face="Verdana" size="2">2. Crea un nuevo botón llamado mayor que al oprimirlo el usuario
+      aparezca en el área de texto el elemento mayor y la posición en la que
+      se encontró dentro del arreglo (tomar la posición cero como la primera y
+      así sucesivamente)., como se muestra en la figura:</font></p>
+      <p align="center"><img border="0" src="M6-1Ja11.gif" width="423" height="292"></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="74%" bgcolor="#000000" height="18"><font face="Verdana" color="#FFFFFF"><b>Ligas
+      sugeridas</b></font></td>
+  </tr>
+  <tr>
+    <td width="74%" bgcolor="#FFFFFF" height="19">
+      <p><font face="Verdana" size="2"><a href="http://java.sun.com/docs/books/tutorial/java/data/arraybasics.html">http://java.sun.com/docs/books/tutorial/java/data/arraybasics.html</a></font></td>
+  </tr>
+</table>
+<p align="left"><font face="Verdana" size="2"><i><b><a href="CURSO-JAVA.htm">Regresar
+</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="M6-2Java.htm">Siguiente</a></b></i></font></p>
+
+</body>
+
+</html>

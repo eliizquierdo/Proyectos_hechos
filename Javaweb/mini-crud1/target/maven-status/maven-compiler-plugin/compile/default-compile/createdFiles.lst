@@ -1,0 +1,6 @@
+controlador\PersonaControladorServlet.class
+modelo\dao\AlumnoDAO.class
+controlador\AlumnoControladorServlet.class
+modelo\vo\PersonaVO.class
+modelo\dao\PersonaDAO.class
+modelo\vo\AlumnoVO.class

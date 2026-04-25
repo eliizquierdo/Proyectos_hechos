@@ -9,7 +9,7 @@ public class Conexion {
     /* Parametros de conexion */
     String bd = "institutoWeb";
     String login = "root";
-    String password = "";
+    String password = "admin123";
     String url = "jdbc:mysql://localhost/" + bd + "?useTimezone=true&serverTimezone=UTC";
 
     private Connection con = null;

@@ -127,21 +127,7 @@ public class AlumnoControladorServlet extends HttpServlet {
         }
     }
 
-    private void mostrarEditar(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        try {
-            int codigo = Integer.parseInt(request.getParameter("id"));
-            AlumnoVO alumno = dao.obtenerAlumnoPorCodigo(codigo);
-            request.setAttribute("alumno", alumno);
-            request.getRequestDispatcher("/vista/alumno-editar.jsp").forward(request, response);
-        } catch (Exception e) {
-            System.err.println("ERROR al mostrar editar: " + e.getMessage());
-            e.printStackTrace();
-            request.setAttribute("error", "No se pudo cargar el alumno: " + e.getMessage());
-            listar(request, response);
-        }
-    }
-
+    // viejo editar
     private void actualizar(HttpServletRequest request, HttpServletResponse response)
             throws IOException, ServletException {
         try {
@@ -149,7 +135,7 @@ public class AlumnoControladorServlet extends HttpServlet {
             String nombre = request.getParameter("nombre");
             String telefono = request.getParameter("telefono");
 
-            boolean exito = dao.actualizarAlumno(new AlumnoVO(codigo, nombre, telefono));
+            dao.actualizarAlumno(new AlumnoVO(codigo, nombre, telefono));
 
             response.sendRedirect(request.getContextPath() + "/alumno"); // PRG
         } catch (Exception e) {
@@ -174,4 +160,21 @@ public class AlumnoControladorServlet extends HttpServlet {
         }
         response.sendRedirect(request.getContextPath() + "/alumno"); // PRG
     }
+
+    // viejo cargarEditar
+    private void mostrarEditar(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        try {
+            int codigo = Integer.parseInt(request.getParameter("id"));
+            AlumnoVO alumno = dao.obtenerAlumnoPorCodigo(codigo);
+            request.setAttribute("alumno", alumno);
+            request.getRequestDispatcher("/vista/alumno-editar.jsp").forward(request, response);
+        } catch (Exception e) {
+            System.err.println("ERROR al mostrar editar: " + e.getMessage());
+            e.printStackTrace();
+            request.setAttribute("error", "No se pudo cargar el alumno: " + e.getMessage());
+            listar(request, response);
+        }
+    }
+
 }

@@ -1,0 +1,58 @@
+DROP DATABASE IF EXISTS poliDeportivo;
+
+CREATE DATABASE poliDeportivo;
+
+USE poliDeportivo;
+
+select * from material;
+
+CREATE TABLE HUMAN (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    ci INT UNIQUE NOT NULL,
+    dateOfBirth DATE NOT NULL,
+    phoneNumber INT NOT NULL,
+    name VARCHAR(100) NOT NULL,
+    homeAddress VARCHAR(150) NOT NULL,
+    emergencyService VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE TEACHER (
+    id INT PRIMARY KEY,
+    salary FLOAT NOT NULL,
+    FOREIGN KEY (id) REFERENCES HUMAN (id)
+);
+
+CREATE TABLE MEMBER (
+    id INT PRIMARY KEY,
+    FOREIGN KEY (id) REFERENCES HUMAN (id)
+);
+
+CREATE TABLE ACTIVITY (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    entryHour VARCHAR(12) NOT NULL,
+    departHour VARCHAR(12) NOT NULL,
+    teacher_id INT,
+    FOREIGN KEY (teacher_id) REFERENCES TEACHER (id)
+);
+
+CREATE TABLE ACTIVITY_MEMBER (
+    activity_id INT NOT NULL,
+    member_id INT NOT NULL,
+    PRIMARY KEY (activity_id, member_id),
+    FOREIGN KEY (activity_id) REFERENCES ACTIVITY (id) ON DELETE CASCADE,
+    FOREIGN KEY (member_id) REFERENCES MEMBER (id) ON DELETE CASCADE
+);
+
+CREATE TABLE MATERIAL (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    amount INT NOT NULL
+);
+
+CREATE TABLE EMPLOYEE (
+    id INT PRIMARY KEY,
+    salary FLOAT NOT NULL,
+    category VARCHAR(50),
+    FOREIGN KEY (id) REFERENCES HUMAN (id)
+);

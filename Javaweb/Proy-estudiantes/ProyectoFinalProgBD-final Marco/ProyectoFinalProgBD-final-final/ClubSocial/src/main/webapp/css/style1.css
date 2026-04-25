@@ -1,0 +1,113 @@
+body {
+    background-color: #014769;
+}
+.boton-salir {
+            
+    background-color: #0436fc; 
+    color: white; 
+    text-decoration: none; 
+    padding: 15px 25px; 
+    border-radius: 5px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s ease;
+            
+    position: fixed;
+    bottom: 20px; 
+    right: 20px; 
+    z-index: 1000; 
+}
+
+.boton-salir:hover {
+    background-color: #0228c2;
+    cursor: pointer;
+}
+
+.menuAgregar a {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    background: #017fbd;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.menuAgregar a:hover {
+    background: #025d8b;
+}
+
+.menuMostrar a {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    background: #017fbd;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.menuMostrar a:hover {
+    background: #025d8b;
+}
+
+.separador {
+    width: 100%;
+    height: 2px;
+    background-color: #7bf27b;
+    margin: 30px auto;
+}
+
+.menuAgregar label,
+.menuMostrar label {
+    font-size: 1.5em;
+    color: rgb(255, 230, 0);
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+
+h1 {
+  color: rgb(255, 230, 0);
+  text-align: center;
+  font-size: 1.8em;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.encabezado {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #014769;
+}
+
+.encabezado img {
+  cursor: pointer;
+}
+
+.tituloError{
+    color: rgb(252, 1, 1);
+}
+
+.textoError{
+    font-size: 15px;
+    color: #ff8400;
+}
+
+.subTituloInfo{
+    font-size: 25px;
+    color:  #9be5fd;
+}
+
+.textoInfo{
+    font-size: 20px;
+    color: #dedcdc;
+}
+
+h3 {
+    font-size: 1.8em;
+    text-align: center;
+    color: rgb(127, 255, 212);
+    text-decoration: underline;
+}
+

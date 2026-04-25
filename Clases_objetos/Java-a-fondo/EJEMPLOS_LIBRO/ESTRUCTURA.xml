@@ -1,0 +1,6 @@
+
+<tabla nombre="DEPT">
+	<campo nombre="deptno" tipo="integer" size="3" />
+	<campo nombre="dname" tipo="varchar" size="15" />
+	<campo nombre="loc" tipo="varchar" size="15" />
+</tabla>

@@ -1,0 +1,6 @@
+
+<departamentos>
+	<dept deptno="10" dname="Ventas" loc="Buenos Aires" />
+	<dept deptno="20" dname="Compras" loc="Buenos Aires" />
+	<dept deptno="30" dname="Empleados" loc="Santa Fe" />
+</departamentos>
